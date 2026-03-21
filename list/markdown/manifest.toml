@@ -5,7 +5,7 @@ extensions = ["md", "markdown", "mdown", "mkd", "mkdn"]
 [parser]
 type = "wasm"
 source = "build"
-repo = "tree-sitter/tree-sitter-markdown"
+repo = "tree-sitter-grammars/tree-sitter-markdown"
 download_url = "https://github.com/tree-sitter/tree-sitter-markdown/releases/latest/download/tree-sitter-markdown.wasm"
 
 [lsp]
