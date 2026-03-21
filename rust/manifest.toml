@@ -3,10 +3,8 @@ name = "rust"
 extensions = ["rs"]
 
 [parser]
-build_script = "build_parser.sh"
-lib_name = "tree-sitter-rust"
-git_repo = "https://github.com/tree-sitter/tree-sitter-rust"
-git_rev = "master" # or specific tag
+type = "wasm"
+download_url = "https://github.com/tree-sitter/tree-sitter-rust/releases/latest/download/tree-sitter-rust.wasm"
 
 [lsp]
 name = "rust-analyzer"
