@@ -113,10 +113,14 @@ jobs:
       - name: Install tree-sitter CLI
         run: npm install -g tree-sitter-cli@${{ env.TREE_SITTER_VERSION }}
 
-      - name: Setup Emscripten
-        uses: mymindstorm/setup-emsdk@v14
-        with:
-          version: '3.1.56'
+      - name: Install Emscripten
+        run: |
+          git clone --depth 1 https://github.com/emscripten-core/emsdk.git
+          cd emsdk
+          ./emsdk install latest
+          ./emsdk activate latest
+          echo "$PWD/upstream/emscripten" >> $GITHUB_PATH
+          echo "$PWD/upstream/bin" >> $GITHUB_PATH
 
       - name: Clone parser source
         run: git clone --depth 1 https://github.com/${{ matrix.repo }}.git parser-src
