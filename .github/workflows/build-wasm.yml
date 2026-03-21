@@ -98,6 +98,8 @@ jobs:
     needs: detect-changes
     if: needs.detect-changes.outputs.has_changes == 'true'
     runs-on: ubuntu-latest
+    container:
+      image: emscripten/emsdk:latest
     strategy:
       matrix: ${{ fromJson(needs.detect-changes.outputs.matrix) }}
       fail-fast: false
@@ -113,14 +115,10 @@ jobs:
       - name: Install tree-sitter CLI
         run: npm install -g tree-sitter-cli@${{ env.TREE_SITTER_VERSION }}
 
-      - name: Install Emscripten
+      - name: Verify Emscripten
         run: |
-          git clone --depth 1 https://github.com/emscripten-core/emsdk.git
-          cd emsdk
-          ./emsdk install latest
-          ./emsdk activate latest
-          echo "$PWD/upstream/emscripten" >> $GITHUB_PATH
-          echo "$PWD/upstream/bin" >> $GITHUB_PATH
+          emcc --version
+          which emcc
 
       - name: Clone parser source
         run: git clone --depth 1 https://github.com/${{ matrix.repo }}.git parser-src
