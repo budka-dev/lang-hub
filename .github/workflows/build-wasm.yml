@@ -1,0 +1,163 @@
+name: Build Tree-sitter WASM Parsers
+
+on:
+  push:
+    paths:
+      - '**/manifest.toml'
+      - '.github/workflows/build-wasm.yml'
+  pull_request:
+    paths:
+      - '**/manifest.toml'
+  workflow_dispatch:
+
+env:
+  TREE_SITTER_VERSION: 0.25.0
+
+jobs:
+  detect-changes:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.changes.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Detect changed manifests
+        id: changes
+        run: |
+          # Get list of changed manifest.toml files
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            # Build all if manually triggered
+            CHANGED=$(find ./list -name "manifest.toml" | sed 's|^./list/||' | sed 's|/manifest.toml||')
+          else
+            # Get changed files
+            git fetch origin ${{ github.base_ref }} --depth=1 2>/dev/null || true
+            CHANGED=$(git diff --name-only HEAD~1 HEAD 2>/dev/null | grep "list/.*/manifest.toml$" | sed 's|list/||' | sed 's|/manifest.toml||' || true)
+            if [ -z "$CHANGED" ]; then
+              CHANGED=$(find ./list -name "manifest.toml" | sed 's|^./list/||' | sed 's|/manifest.toml||')
+            fi
+          fi
+
+          # Build JSON matrix
+          MATRIX="{\"include\":["
+          FIRST=true
+          for lang in $CHANGED; do
+            if [ -f "list/$lang/manifest.toml" ]; then
+              # Extract repo URL from manifest
+              REPO=$(grep "^repo = " "list/$lang/manifest.toml" | cut -d'"' -f2)
+              SOURCE=$(grep "^source = " "list/$lang/manifest.toml" | cut -d'"' -f2)
+              if [ -n "$REPO" ] && [ "$SOURCE" = "build" ]; then
+                if [ "$FIRST" = true ]; then
+                  FIRST=false
+                else
+                  MATRIX="$MATRIX,"
+                fi
+                MATRIX="$MATRIX{\"language\":\"$lang\",\"repo\":\"$REPO\"}"
+              fi
+            fi
+          done
+          MATRIX="$MATRIX]}"
+
+          echo "matrix=$MATRIX" >> $GITHUB_OUTPUT
+          echo "Detected languages: $MATRIX"
+
+  build-wasm:
+    needs: detect-changes
+    runs-on: ubuntu-latest
+    if: ${{ needs.detect-changes.outputs.matrix != '{"include":[]}' }}
+    strategy:
+      matrix: ${{ fromJson(needs.detect-changes.outputs.matrix) }}
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install tree-sitter CLI
+        run: |
+          npm install -g tree-sitter-cli@${{ env.TREE_SITTER_VERSION }}
+          tree-sitter --version
+
+      - name: Setup Rust
+        uses: dtolnay/rust-action@stable
+        with:
+          targets: wasm32-unknown-unknown, wasm32-wasi
+
+      - name: Install wasm-tools
+        run: |
+          cargo install wasm-tools --locked
+
+      - name: Checkout parser repository
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ matrix.repo }}
+          path: parser-src
+
+      - name: Build WASM parser
+        run: |
+          cd parser-src
+
+          # Generate parser if needed
+          if [ ! -f "src/parser.c" ]; then
+            tree-sitter generate
+          fi
+
+          # Build WASM
+          tree-sitter build --wasm
+
+          # Verify output
+          ls -la *.wasm
+
+      - name: Upload WASM artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.language }}-parser
+          path: parser-src/*.wasm
+          retention-days: 30
+
+      - name: Copy WASM to language directory
+        run: |
+          mkdir -p list/${{ matrix.language }}/parser
+          cp parser-src/*.wasm list/${{ matrix.language }}/parser/
+
+      - name: Commit built WASM
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add list/${{ matrix.language }}/parser/*.wasm
+          git diff --staged --quiet || git commit -m "build: compile ${{ matrix.language }} parser to WASM"
+          git push
+
+  release-parsers:
+    needs: build-wasm
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          pattern: "*-parser"
+
+      - name: Create release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: parsers-${{ github.run_number }}
+          name: Tree-sitter WASM Parsers Release ${{ github.run_number }}
+          body: |
+            Pre-built WASM parsers for all supported languages.
+
+            ## Installation
+            Download the appropriate `.wasm` file for your language.
+
+            ## Languages Included
+            ${{ needs.build-wasm.outputs.languages }}
+          files: artifacts/*/*.wasm
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,19 @@
+[language]
+name = "html"
+extensions = ["html", "htm", "xhtml"]
+
+[parser]
+type = "wasm"
+source = "prebuilt"
+repo = "tree-sitter/tree-sitter-html"
+download_url = "https://github.com/tree-sitter/tree-sitter-html/releases/latest/download/tree-sitter-html.wasm"
+
+[lsp]
+name = "vscode-html-language-server"
+download_url = "https://registry.npmjs.org/vscode-langservers-extracted/-/vscode-langservers-extracted-latest.tgz"
+command = "vscode-html-language-server"
+args = ["--stdio"]
+
+[sandbox]
+compile_cmd = ""
+run_cmd = ""

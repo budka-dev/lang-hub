@@ -1,0 +1,19 @@
+[language]
+name = "ruby"
+extensions = ["rb", "rbw", "rake", "gemspec"]
+
+[parser]
+type = "wasm"
+source = "prebuilt"
+repo = "tree-sitter/tree-sitter-ruby"
+download_url = "https://github.com/tree-sitter/tree-sitter-ruby/releases/latest/download/tree-sitter-ruby.wasm"
+
+[lsp]
+name = "solargraph"
+download_url = "https://rubygems.org/downloads/solargraph-0.50.0.gem"
+command = "solargraph"
+args = ["stdio"]
+
+[sandbox]
+compile_cmd = "ruby -c {src}"
+run_cmd = "ruby {src}"

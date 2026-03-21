@@ -4,6 +4,9 @@ extensions = ["rs"]
 
 [parser]
 type = "wasm"
+# Official pre-built WASM from tree-sitter org
+source = "prebuilt"
+repo = "tree-sitter/tree-sitter-rust"
 download_url = "https://github.com/tree-sitter/tree-sitter-rust/releases/latest/download/tree-sitter-rust.wasm"
 
 [lsp]

@@ -1,0 +1,19 @@
+[language]
+name = "toml"
+extensions = ["toml"]
+
+[parser]
+type = "wasm"
+source = "build"
+repo = "tree-sitter/tree-sitter-toml"
+download_url = "https://github.com/tree-sitter/tree-sitter-toml/releases/latest/download/tree-sitter-toml.wasm"
+
+[lsp]
+name = "taplo"
+download_url = "https://github.com/tamasfe/taplo/releases/latest/download/taplo-{os}-{arch}.gz"
+command = "taplo"
+args = ["lsp", "stdio"]
+
+[sandbox]
+compile_cmd = ""
+run_cmd = ""

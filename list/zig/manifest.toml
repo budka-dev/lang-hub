@@ -1,0 +1,18 @@
+[language]
+name = "zig"
+extensions = ["zig"]
+
+[parser]
+type = "wasm"
+source = "build"
+repo = "tree-sitter-grammars/tree-sitter-zig"
+download_url = "https://github.com/tree-sitter-grammars/tree-sitter-zig/releases/latest/download/tree-sitter-zig.wasm"
+
+[lsp]
+name = "zls"
+download_url = "https://github.com/zigtools/zls/releases/latest/download/zls-{arch}-{os}.tar.xz"
+command = "zls"
+
+[sandbox]
+compile_cmd = "zig build-exe -O ReleaseFast -femit-bin={out} {src}"
+run_cmd = "./{out}"

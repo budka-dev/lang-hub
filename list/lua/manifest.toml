@@ -1,0 +1,19 @@
+[language]
+name = "lua"
+extensions = ["lua"]
+
+[parser]
+type = "wasm"
+source = "build"
+repo = "tree-sitter-grammars/tree-sitter-lua"
+# NOTE: No official WASM release yet, needs manual compilation
+download_url = "https://github.com/tree-sitter-grammars/tree-sitter-lua"
+
+[lsp]
+name = "lua-language-server"
+download_url = "https://github.com/LuaLS/lua-language-server/releases/latest/download/lua-language-server-{os}-{arch}.tar.gz"
+command = "lua-language-server"
+
+[sandbox]
+compile_cmd = "luac -p {src}"
+run_cmd = "lua {src}"

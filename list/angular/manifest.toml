@@ -1,0 +1,19 @@
+[language]
+name = "angular"
+extensions = ["ts", "html", "css", "scss"]
+
+[parser]
+type = "wasm"
+source = "build"
+repo = "tree-sitter/tree-sitter-typescript"
+download_url = "https://github.com/tree-sitter/tree-sitter-typescript/releases/latest/download/tree-sitter-typescript.wasm"
+
+[lsp]
+name = "angular-language-server"
+download_url = "https://registry.npmjs.org/@angular/language-server/-/language-server-latest.tgz"
+command = "ngserver"
+args = ["--stdio"]
+
+[sandbox]
+compile_cmd = "ng build --dry-run"
+run_cmd = "ng serve"

@@ -1,0 +1,19 @@
+[language]
+name = "json"
+extensions = ["json"]
+
+[parser]
+type = "wasm"
+source = "prebuilt"
+repo = "tree-sitter/tree-sitter-json"
+download_url = "https://github.com/tree-sitter/tree-sitter-json/releases/latest/download/tree-sitter-json.wasm"
+
+[lsp]
+name = "vscode-json-language-server"
+download_url = "https://registry.npmjs.org/vscode-langservers-extracted/-/vscode-langservers-extracted-latest.tgz"
+command = "vscode-json-language-server"
+args = ["--stdio"]
+
+[sandbox]
+compile_cmd = "python3 -m json.tool {src} > /dev/null"
+run_cmd = ""

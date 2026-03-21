@@ -1,0 +1,21 @@
+[language]
+name = "sql"
+extensions = ["sql"]
+
+[parser]
+type = "wasm"
+# Needs CI build - no official WASM release
+source = "build"
+repo = "DerekStride/tree-sitter-sql"
+# Will be built by CI and stored locally
+download_url = "./parser/tree-sitter-sql.wasm"
+
+[lsp]
+name = "sql-language-server"
+download_url = "https://registry.npmjs.org/sql-language-server/-/sql-language-server-latest.tgz"
+command = "sql-language-server"
+args = ["up", "--method", "stdio"]
+
+[sandbox]
+compile_cmd = "sqlite3 :memory: '.read {src}'"
+run_cmd = ""

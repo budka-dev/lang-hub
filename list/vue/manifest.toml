@@ -1,0 +1,19 @@
+[language]
+name = "vue"
+extensions = ["vue"]
+
+[parser]
+type = "wasm"
+source = "build"
+repo = "tree-sitter-grammars/tree-sitter-vue"
+download_url = "https://github.com/tree-sitter-grammars/tree-sitter-vue/releases/latest/download/tree-sitter-vue.wasm"
+
+[lsp]
+name = "volar"
+download_url = "https://registry.npmjs.org/@volar/vue-language-server/-/vue-language-server-latest.tgz"
+command = "vue-language-server"
+args = ["--stdio"]
+
+[sandbox]
+compile_cmd = "vue-tsc --noEmit {src}"
+run_cmd = "npm run dev"

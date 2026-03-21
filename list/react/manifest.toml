@@ -1,0 +1,19 @@
+[language]
+name = "react"
+extensions = ["jsx", "tsx"]
+
+[parser]
+type = "wasm"
+source = "build"
+repo = "tree-sitter/tree-sitter-typescript"
+download_url = "https://github.com/tree-sitter/tree-sitter-typescript/releases/latest/download/tree-sitter-typescript.wasm"
+
+[lsp]
+name = "typescript-language-server"
+download_url = "https://registry.npmjs.org/typescript-language-server/-/typescript-language-server-latest.tgz"
+command = "typescript-language-server"
+args = ["--stdio"]
+
+[sandbox]
+compile_cmd = "tsc --jsx react-jsx --noEmit {src}"
+run_cmd = "npm run dev"

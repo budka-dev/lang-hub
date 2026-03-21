@@ -1,0 +1,19 @@
+[language]
+name = "dockerfile"
+extensions = ["Dockerfile", "dockerfile"]
+
+[parser]
+type = "wasm"
+source = "build"
+repo = "camdencheek/tree-sitter-dockerfile"
+download_url = "https://github.com/camdencheek/tree-sitter-dockerfile/releases/latest/download/tree-sitter-dockerfile.wasm"
+
+[lsp]
+name = "dockerfile-language-server"
+download_url = "https://registry.npmjs.org/dockerfile-language-server-nodejs/-/dockerfile-language-server-nodejs-latest.tgz"
+command = "docker-langserver"
+args = ["--stdio"]
+
+[sandbox]
+compile_cmd = "docker build -f {src} -t test-build ."
+run_cmd = ""

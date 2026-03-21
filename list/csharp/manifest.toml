@@ -1,0 +1,19 @@
+[language]
+name = "csharp"
+extensions = ["cs"]
+
+[parser]
+type = "wasm"
+source = "build"
+repo = "tree-sitter/tree-sitter-c-sharp"
+download_url = "https://github.com/tree-sitter/tree-sitter-c-sharp/releases/latest/download/tree-sitter-c-sharp.wasm"
+
+[lsp]
+name = "omnisharp"
+download_url = "https://github.com/OmniSharp/omnisharp-roslyn/releases/latest/download/omnisharp-{os}-{arch}.tar.gz"
+command = "omnisharp"
+args = ["-lsp"]
+
+[sandbox]
+compile_cmd = "dotnet build -o {out_dir} {src}"
+run_cmd = "dotnet {out}"

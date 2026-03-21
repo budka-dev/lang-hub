@@ -1,0 +1,19 @@
+[language]
+name = "yaml"
+extensions = ["yaml", "yml"]
+
+[parser]
+type = "wasm"
+source = "build"
+repo = "tree-sitter/tree-sitter-yaml"
+download_url = "https://github.com/tree-sitter/tree-sitter-yaml/releases/latest/download/tree-sitter-yaml.wasm"
+
+[lsp]
+name = "yaml-language-server"
+download_url = "https://registry.npmjs.org/yaml-language-server/-/yaml-language-server-latest.tgz"
+command = "yaml-language-server"
+args = ["--stdio"]
+
+[sandbox]
+compile_cmd = "python3 -c 'import yaml; yaml.safe_load(open(\"{src}\"))'"
+run_cmd = ""

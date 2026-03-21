@@ -1,0 +1,19 @@
+[language]
+name = "svelte"
+extensions = ["svelte"]
+
+[parser]
+type = "wasm"
+source = "build"
+repo = "Himujjal/tree-sitter-svelte"
+download_url = "https://github.com/Himujjal/tree-sitter-svelte/releases/latest/download/tree-sitter-svelte.wasm"
+
+[lsp]
+name = "svelte-language-server"
+download_url = "https://registry.npmjs.org/svelte-language-server/-/svelte-language-server-latest.tgz"
+command = "svelteserver"
+args = ["--stdio"]
+
+[sandbox]
+compile_cmd = "svelte-check --workspace {src}"
+run_cmd = "npm run dev"

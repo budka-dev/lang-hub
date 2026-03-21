@@ -1,0 +1,19 @@
+[language]
+name = "python"
+extensions = ["py", "pyw", "pyi"]
+
+[parser]
+type = "wasm"
+source = "prebuilt"
+repo = "tree-sitter/tree-sitter-python"
+download_url = "https://github.com/tree-sitter/tree-sitter-python/releases/latest/download/tree-sitter-python.wasm"
+
+[lsp]
+name = "pyright"
+download_url = "https://registry.npmjs.org/pyright/-/pyright-latest.tgz"
+command = "pyright-langserver"
+args = ["--stdio"]
+
+[sandbox]
+compile_cmd = "python3 -m py_compile {src}"
+run_cmd = "python3 {src}"

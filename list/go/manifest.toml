@@ -1,0 +1,18 @@
+[language]
+name = "go"
+extensions = ["go"]
+
+[parser]
+type = "wasm"
+source = "prebuilt"
+repo = "tree-sitter/tree-sitter-go"
+download_url = "https://github.com/tree-sitter/tree-sitter-go/releases/latest/download/tree-sitter-go.wasm"
+
+[lsp]
+name = "gopls"
+download_url = "https://github.com/golang/tools/releases/latest/download/gopls_{os}_{arch}"
+command = "gopls"
+
+[sandbox]
+compile_cmd = "go build -o {out} {src}"
+run_cmd = "./{out}"

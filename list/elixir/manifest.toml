@@ -1,0 +1,18 @@
+[language]
+name = "elixir"
+extensions = ["ex", "exs"]
+
+[parser]
+type = "wasm"
+source = "build"
+repo = "elixir-lang/tree-sitter-elixir"
+download_url = "https://github.com/elixir-lang/tree-sitter-elixir/releases/latest/download/tree-sitter-elixir.wasm"
+
+[lsp]
+name = "elixir-ls"
+download_url = "https://github.com/elixir-lsp/elixir-ls/releases/latest/download/elixir-ls.zip"
+command = "language_server.sh"
+
+[sandbox]
+compile_cmd = "elixirc {src}"
+run_cmd = "elixir {src}"

@@ -1,0 +1,18 @@
+[language]
+name = "cpp"
+extensions = ["cpp", "cc", "cxx", "hpp", "hh", "hxx"]
+
+[parser]
+type = "wasm"
+source = "build"
+repo = "tree-sitter/tree-sitter-cpp"
+download_url = "https://github.com/tree-sitter/tree-sitter-cpp/releases/latest/download/tree-sitter-cpp.wasm"
+
+[lsp]
+name = "clangd"
+download_url = "https://github.com/clangd/clangd/releases/latest/download/clangd-{os}-{arch}.zip"
+command = "clangd"
+
+[sandbox]
+compile_cmd = "g++ -std=c++17 -o {out} {src}"
+run_cmd = "./{out}"

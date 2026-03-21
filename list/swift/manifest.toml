@@ -1,0 +1,20 @@
+[language]
+name = "swift"
+extensions = ["swift"]
+
+[parser]
+type = "wasm"
+# Needs CI build - no official WASM release
+source = "build"
+repo = "alex-pinkus/tree-sitter-swift"
+# Will be built by CI and stored locally
+download_url = "./parser/tree-sitter-swift.wasm"
+
+[lsp]
+name = "sourcekit-lsp"
+download_url = "https://github.com/apple/sourcekit-lsp/releases/latest/download/sourcekit-lsp-{os}-{arch}.zip"
+command = "sourcekit-lsp"
+
+[sandbox]
+compile_cmd = "swift build"
+run_cmd = "swift run"

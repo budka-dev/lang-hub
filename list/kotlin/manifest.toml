@@ -1,0 +1,19 @@
+[language]
+name = "kotlin"
+extensions = ["kt", "kts"]
+
+[parser]
+type = "wasm"
+source = "build"
+repo = "fwcd/tree-sitter-kotlin"
+# NOTE: No official WASM release yet, needs manual compilation
+download_url = "https://github.com/fwcd/tree-sitter-kotlin"
+
+[lsp]
+name = "kotlin-language-server"
+download_url = "https://github.com/fwcd/kotlin-language-server/releases/latest/download/server.zip"
+command = "kotlin-language-server"
+
+[sandbox]
+compile_cmd = "kotlinc -d {out}.jar {src}"
+run_cmd = "kotlin -cp {out}.jar {class_name}"

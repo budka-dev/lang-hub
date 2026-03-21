@@ -1,0 +1,18 @@
+[language]
+name = "java"
+extensions = ["java"]
+
+[parser]
+type = "wasm"
+source = "prebuilt"
+repo = "tree-sitter/tree-sitter-java"
+download_url = "https://github.com/tree-sitter/tree-sitter-java/releases/latest/download/tree-sitter-java.wasm"
+
+[lsp]
+name = "jdtls"
+download_url = "https://download.eclipse.org/jdtls/snapshots/jdt-language-server-latest.tar.gz"
+command = "jdtls"
+
+[sandbox]
+compile_cmd = "javac -d . {src}"
+run_cmd = "java {class_name}"

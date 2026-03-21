@@ -1,0 +1,18 @@
+[language]
+name = "c"
+extensions = ["c", "h"]
+
+[parser]
+type = "wasm"
+source = "build"
+repo = "tree-sitter/tree-sitter-c"
+download_url = "https://github.com/tree-sitter/tree-sitter-c/releases/latest/download/tree-sitter-c.wasm"
+
+[lsp]
+name = "clangd"
+download_url = "https://github.com/clangd/clangd/releases/latest/download/clangd-{os}-{arch}.zip"
+command = "clangd"
+
+[sandbox]
+compile_cmd = "gcc -o {out} {src}"
+run_cmd = "./{out}"

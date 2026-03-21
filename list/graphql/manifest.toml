@@ -1,0 +1,19 @@
+[language]
+name = "graphql"
+extensions = ["graphql", "gql"]
+
+[parser]
+type = "wasm"
+source = "build"
+repo = "bkegley/tree-sitter-graphql"
+download_url = "https://github.com/bkegley/tree-sitter-graphql/releases/latest/download/tree-sitter-graphql.wasm"
+
+[lsp]
+name = "graphql-language-service-server"
+download_url = "https://registry.npmjs.org/graphql-language-service-server/-/graphql-language-service-server-latest.tgz"
+command = "graphql-lsp"
+args = ["server", "-m", "stream"]
+
+[sandbox]
+compile_cmd = "node -e \"const { parse } = require('graphql'); parse(require('fs').readFileSync('{src}', 'utf8'))\""
+run_cmd = ""
