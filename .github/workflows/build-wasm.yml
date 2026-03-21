@@ -136,8 +136,7 @@ jobs:
           # Build WASM binary
           tree-sitter build --wasm -o tree-sitter-${{ matrix.language }}.wasm
 
-          # Verify output exists and is valid
-          file tree-sitter-${{ matrix.language }}.wasm
+          # Verify output exists
           ls -lh tree-sitter-${{ matrix.language }}.wasm
 
       - name: Upload WASM artifact
