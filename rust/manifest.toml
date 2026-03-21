@@ -1,0 +1,18 @@
+[language]
+name = "rust"
+extensions = ["rs"]
+
+[parser]
+build_script = "build_parser.sh"
+lib_name = "tree-sitter-rust"
+git_repo = "https://github.com/tree-sitter/tree-sitter-rust"
+git_rev = "master" # or specific tag
+
+[lsp]
+name = "rust-analyzer"
+download_url = "https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-{os}-{arch}.gz"
+command = "rust-analyzer"
+
+[sandbox]
+compile_cmd = "rustc -o {out} {src}"
+run_cmd = "./{out}"
