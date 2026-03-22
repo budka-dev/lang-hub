@@ -9,8 +9,8 @@ repo = "bkegley/tree-sitter-graphql"
 download_url = "https://github.com/bkegley/tree-sitter-graphql/releases/latest/download/tree-sitter-graphql.wasm"
 
 [lsp]
-name = "graphql-language-service-server"
-download_url = "https://registry.npmjs.org/graphql-language-service-server/-/graphql-language-service-server-latest.tgz"
+name = "graphql-language-service-cli"
+download_url = "https://registry.npmjs.org/graphql-language-service-cli/-/graphql-language-service-cli-latest.tgz"
 command = "graphql-lsp"
 args = ["server", "-m", "stream"]
 

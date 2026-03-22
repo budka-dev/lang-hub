@@ -10,7 +10,7 @@ download_url = "https://github.com/elixir-lang/tree-sitter-elixir/releases/lates
 
 [lsp]
 name = "elixir-ls"
-download_url = "https://github.com/elixir-lsp/elixir-ls/releases/latest/download/elixir-ls.zip"
+download_url = "https://github.com/elixir-lsp/elixir-ls/releases/download/v0.30.0/elixir-ls-v0.30.0.zip"
 command = "language_server.sh"
 
 [sandbox]

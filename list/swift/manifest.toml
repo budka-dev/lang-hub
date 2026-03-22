@@ -12,7 +12,8 @@ download_url = "./parser/tree-sitter-swift.wasm"
 
 [lsp]
 name = "sourcekit-lsp"
-download_url = "https://github.com/apple/sourcekit-lsp/releases/latest/download/sourcekit-lsp-{os}-{arch}.zip"
+# Binaries are not provided on GitHub Releases. Installed as part of the official Swift toolchain (swift.org).
+download_url = ""
 command = "sourcekit-lsp"
 
 [sandbox]

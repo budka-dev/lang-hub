@@ -10,7 +10,8 @@ download_url = "https://github.com/tree-sitter/tree-sitter-go/releases/latest/do
 
 [lsp]
 name = "gopls"
-download_url = "https://github.com/golang/tools/releases/latest/download/gopls_{os}_{arch}"
+# Binaries are not provided on GitHub Releases. Install via: go install golang.org/x/tools/gopls@latest
+download_url = ""
 command = "gopls"
 
 [sandbox]
