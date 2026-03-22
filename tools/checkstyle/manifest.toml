@@ -1,0 +1,7 @@
+[tool]
+name = "checkstyle"
+description = "Java linter"
+capabilities = ["linter"]
+
+[linter]
+command = "checkstyle"

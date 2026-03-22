@@ -1,0 +1,7 @@
+[tool]
+name = "swiftformat"
+description = "Swift formatter"
+capabilities = ["formatter"]
+
+[formatter]
+command = "swiftformat"

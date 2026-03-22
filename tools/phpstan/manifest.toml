@@ -1,0 +1,8 @@
+[tool]
+name = "phpstan"
+description = "PHP linter"
+capabilities = ["linter"]
+
+[linter]
+command = "phpstan"
+args = ["analyse"]

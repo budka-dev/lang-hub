@@ -1,0 +1,12 @@
+[tool]
+name = "taplo"
+description = "TOML toolkit"
+capabilities = ["formatter", "linter"]
+
+[formatter]
+command = "taplo"
+args = ["format"]
+
+[linter]
+command = "taplo"
+args = ["lint"]

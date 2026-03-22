@@ -33,3 +33,11 @@ ignore_folders = [
     "**/build/**",
     "**/.gradle/**",
 ]
+
+[formatter]
+tool = "ktlint"
+args = ["{src}"]
+
+[linter]
+tool = "ktlint"
+args = ["{src}"]

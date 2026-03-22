@@ -1,0 +1,8 @@
+[tool]
+name = "php-cs-fixer"
+description = "PHP formatter"
+capabilities = ["formatter"]
+
+[formatter]
+command = "php-cs-fixer"
+args = ["fix"]

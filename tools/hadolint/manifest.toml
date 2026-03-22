@@ -1,0 +1,7 @@
+[tool]
+name = "hadolint"
+description = "Dockerfile linter"
+capabilities = ["linter"]
+
+[linter]
+command = "hadolint"

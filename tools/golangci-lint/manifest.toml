@@ -1,0 +1,8 @@
+[tool]
+name = "golangci-lint"
+description = "Go linter"
+capabilities = ["linter"]
+
+[linter]
+command = "golangci-lint"
+args = ["run", "--fix"]

@@ -1,0 +1,7 @@
+[tool]
+name = "hlint"
+description = "Haskell linter"
+capabilities = ["linter"]
+
+[linter]
+command = "hlint"

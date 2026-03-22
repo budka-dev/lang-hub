@@ -34,3 +34,7 @@ ignore_folders = [
     "**/bin/**",
     "**/obj/**",
 ]
+
+[formatter]
+tool = "dotnet-format"
+args = ["{src}"]

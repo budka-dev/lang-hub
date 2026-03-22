@@ -33,3 +33,11 @@ ignore_folders = [
     "**/bin/**",
     "**/obj/**",
 ]
+
+[formatter]
+tool = "clang-format"
+args = ["{src}"]
+
+[linter]
+tool = "clang-tidy"
+args = ["{src}"]

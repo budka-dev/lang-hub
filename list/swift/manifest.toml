@@ -28,3 +28,10 @@ compile_cmd = "swift build"
 run_cmd = "swift run"
 test_cmd = ""
 
+[formatter]
+tool = "swiftformat"
+args = ["{src}"]
+
+[linter]
+tool = "swiftlint"
+args = ["{src}"]

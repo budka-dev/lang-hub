@@ -1,0 +1,8 @@
+[tool]
+name = "gofmt"
+description = "Formats Go programs"
+capabilities = ["formatter"]
+
+[formatter]
+command = "gofmt"
+args = ["-w"]

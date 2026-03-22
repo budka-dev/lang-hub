@@ -1,0 +1,7 @@
+[tool]
+name = "clang-tidy"
+description = "C/C++ linter"
+capabilities = ["linter"]
+
+[linter]
+command = "clang-tidy"

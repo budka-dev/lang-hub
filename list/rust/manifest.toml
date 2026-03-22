@@ -35,3 +35,7 @@ ignore_folders = [
 [formatter]
 tool = "rustfmt"
 args = ["{src}"]
+
+[linter]
+tool = "clippy"
+args = ["{src}"]

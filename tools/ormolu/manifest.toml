@@ -1,0 +1,8 @@
+[tool]
+name = "ormolu"
+description = "Haskell formatter"
+capabilities = ["formatter"]
+
+[formatter]
+command = "ormolu"
+args = ["--mode", "inplace"]

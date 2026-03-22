@@ -32,3 +32,11 @@ ignore_folders = [
     "**/deps/**",
     "**/doc/**",
 ]
+
+[formatter]
+tool = "mix"
+args = ["{src}"]
+
+[linter]
+tool = "mix"
+args = ["{src}"]

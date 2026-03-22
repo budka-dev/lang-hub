@@ -1,0 +1,12 @@
+[tool]
+name = "mix"
+description = "Elixir tooling"
+capabilities = ["formatter", "linter"]
+
+[formatter]
+command = "mix"
+args = ["format"]
+
+[linter]
+command = "mix"
+args = ["credo"]

@@ -28,3 +28,10 @@ compile_cmd = "sqlite3 :memory: '.read {src}'"
 run_cmd = ""
 test_cmd = ""
 
+[formatter]
+tool = "sqlfluff"
+args = ["{src}"]
+
+[linter]
+tool = "sqlfluff"
+args = ["{src}"]

@@ -1,0 +1,7 @@
+[tool]
+name = "stylua"
+description = "Lua formatter"
+capabilities = ["formatter"]
+
+[formatter]
+command = "stylua"

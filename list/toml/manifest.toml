@@ -26,3 +26,10 @@ compile_cmd = ""
 run_cmd = ""
 test_cmd = ""
 
+[formatter]
+tool = "taplo"
+args = ["{src}"]
+
+[linter]
+tool = "taplo"
+args = ["{src}"]

@@ -1,0 +1,8 @@
+[tool]
+name = "clippy"
+description = "Rust linter"
+capabilities = ["linter"]
+
+[linter]
+command = "cargo"
+args = ["clippy", "--fix", "--allow-dirty", "--allow-staged"]

@@ -1,0 +1,7 @@
+[tool]
+name = "swiftlint"
+description = "Swift linter"
+capabilities = ["linter"]
+
+[linter]
+command = "swiftlint"

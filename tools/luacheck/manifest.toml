@@ -1,0 +1,7 @@
+[tool]
+name = "luacheck"
+description = "Lua linter"
+capabilities = ["linter"]
+
+[linter]
+command = "luacheck"

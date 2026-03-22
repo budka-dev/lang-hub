@@ -1,0 +1,12 @@
+[tool]
+name = "rubocop"
+description = "Ruby formatter/linter"
+capabilities = ["formatter", "linter"]
+
+[formatter]
+command = "rubocop"
+args = ["-A"]
+
+[linter]
+command = "rubocop"
+args = ["-A"]

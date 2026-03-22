@@ -31,3 +31,11 @@ test_cmd = ""
 ignore_folders = [
     "**/vendor/**",
 ]
+
+[formatter]
+tool = "php-cs-fixer"
+args = ["{src}"]
+
+[linter]
+tool = "phpstan"
+args = ["{src}"]

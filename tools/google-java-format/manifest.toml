@@ -1,0 +1,8 @@
+[tool]
+name = "google-java-format"
+description = "Java formatter"
+capabilities = ["formatter"]
+
+[formatter]
+command = "google-java-format"
+args = ["--replace"]

@@ -1,0 +1,12 @@
+[tool]
+name = "sqlfluff"
+description = "SQL linter/formatter"
+capabilities = ["formatter", "linter"]
+
+[formatter]
+command = "sqlfluff"
+args = ["fix", "--force"]
+
+[linter]
+command = "sqlfluff"
+args = ["lint"]

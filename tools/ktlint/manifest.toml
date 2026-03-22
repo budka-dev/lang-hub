@@ -1,0 +1,11 @@
+[tool]
+name = "ktlint"
+description = "Kotlin formatter/linter"
+capabilities = ["formatter", "linter"]
+
+[formatter]
+command = "ktlint"
+args = ["-F"]
+
+[linter]
+command = "ktlint"

@@ -32,3 +32,11 @@ ignore_folders = [
     "**/build/**",
     "**/.gradle/**",
 ]
+
+[formatter]
+tool = "google-java-format"
+args = ["{src}"]
+
+[linter]
+tool = "checkstyle"
+args = ["{src}"]

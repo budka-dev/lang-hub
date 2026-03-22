@@ -33,3 +33,11 @@ ignore_folders = [
     "**/bin/**",
     "**/pkg/**",
 ]
+
+[formatter]
+tool = "gofmt"
+args = ["{src}"]
+
+[linter]
+tool = "golangci-lint"
+args = ["{src}"]

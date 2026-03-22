@@ -1,0 +1,8 @@
+[tool]
+name = "dotnet-format"
+description = ".NET formatter"
+capabilities = ["formatter"]
+
+[formatter]
+command = "dotnet"
+args = ["format"]
