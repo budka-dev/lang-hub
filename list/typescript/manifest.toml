@@ -37,3 +37,11 @@ ignore_folders = [
     "**/.nuxt/**",
     "**/coverage/**",
 ]
+
+[formatter]
+tool = "biome"
+args = ["{src}"]
+
+[linter]
+tool = "biome"
+args = ["{src}"]

@@ -26,3 +26,10 @@ compile_cmd = "python3 -m json.tool {src} > /dev/null"
 run_cmd = ""
 test_cmd = ""
 
+[formatter]
+tool = "biome"
+args = ["{src}"]
+
+[linter]
+tool = "biome"
+args = ["{src}"]

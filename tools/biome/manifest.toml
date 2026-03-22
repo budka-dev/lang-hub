@@ -2,7 +2,6 @@
 name = "biome"
 description = "Web project toolchain for formatting and linting"
 capabilities = ["formatter", "linter"]
-languages = ["javascript", "typescript", "json", "css", "vue", "svelte"]
 
 [tool.download]
 url = "https://github.com/biomejs/biome/releases/download/cli%2F1.9.3/biome-linux-x64"
@@ -10,8 +9,8 @@ executable_name = "biome"
 
 [formatter]
 command = "biome"
-args = ["format", "--write", "{src}"]
+args = ["format", "--write"]
 
 [linter]
 command = "biome"
-args = ["lint", "--apply", "{src}"]
+args = ["lint", "--apply"]

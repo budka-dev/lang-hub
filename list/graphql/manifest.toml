@@ -26,3 +26,6 @@ compile_cmd = "node -e \"const { parse } = require('graphql'); parse(require('fs
 run_cmd = ""
 test_cmd = ""
 
+[formatter]
+tool = "prettier"
+args = ["{src}"]

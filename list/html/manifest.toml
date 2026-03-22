@@ -37,3 +37,7 @@ ignore_folders = [
     "**/.nuxt/**",
     "**/coverage/**",
 ]
+
+[formatter]
+tool = "prettier"
+args = ["{src}"]

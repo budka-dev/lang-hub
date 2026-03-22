@@ -2,8 +2,7 @@
 name = "prettier"
 description = "An opinionated code formatter"
 capabilities = ["formatter"]
-languages = ["javascript", "typescript", "json", "css", "scss", "html", "vue", "svelte", "markdown", "yaml"]
 
 [formatter]
 command = "npx"
-args = ["prettier", "--write", "{src}"]
+args = ["prettier", "--write"]

@@ -31,3 +31,7 @@ test_cmd = ""
 ignore_folders = [
     "**/target/**",
 ]
+
+[formatter]
+tool = "rustfmt"
+args = ["{src}"]

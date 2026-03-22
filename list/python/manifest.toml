@@ -37,3 +37,11 @@ ignore_folders = [
     "**/build/**",
     "**/dist/**",
 ]
+
+[formatter]
+tool = "ruff"
+args = ["{src}"]
+
+[linter]
+tool = "ruff"
+args = ["{src}"]
