@@ -195,6 +195,26 @@ jobs:
 
           echo "BUILT_LANGS=$BUILT_LANGS" >> $GITHUB_ENV
 
+      - name: Download prebuilt WASM files
+        run: |
+          PREBUILT_LANGS=""
+          for manifest in list/*/manifest.toml; do
+            lang=$(basename $(dirname "$manifest"))
+            SOURCE=$(awk -F'"' '/^source[ \t]*=[ \t]*/ {print $2}' "$manifest" | head -1)
+            if [ "$SOURCE" = "prebuilt" ]; then
+              URL=$(awk -F'"' '/^download_url[ \t]*=[ \t]*/ {print $2}' "$manifest" | head -1)
+              if [ -n "$URL" ]; then
+                echo "Downloading prebuilt WASM for $lang..."
+                mkdir -p "list/$lang/parser"
+                curl -L -s -o "list/$lang/parser/tree-sitter-$lang.wasm" "$URL"
+                if [ -f "list/$lang/parser/tree-sitter-$lang.wasm" ]; then
+                  PREBUILT_LANGS="$PREBUILT_LANGS $lang"
+                fi
+              fi
+            fi
+          done
+          echo "BUILT_LANGS=${BUILT_LANGS}${PREBUILT_LANGS}" >> $GITHUB_ENV
+
       - name: Commit WASM files
         run: |
           git config user.email "github-actions[bot]@users.noreply.github.com"
