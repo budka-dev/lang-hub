@@ -3,9 +3,6 @@ name: Build Tree-sitter WASM Parsers
 on:
   push:
     branches: [main]
-    paths:
-      - 'list/**/manifest.toml'
-      - '.github/workflows/build-wasm.yml'
   pull_request:
     paths:
       - 'list/**/manifest.toml'
@@ -161,8 +158,8 @@ jobs:
 
   # ─── Step 3: Commit WASM files and create release ───
   release:
-    needs: build-wasm
-    if: github.ref == 'refs/heads/main'
+    needs: [detect-changes, build-wasm]
+    if: always() && needs.detect-changes.result == 'success' && (needs.build-wasm.result == 'success' || needs.build-wasm.result == 'skipped') && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -174,6 +171,7 @@ jobs:
 
       - name: Download all built WASM artifacts
         uses: actions/download-artifact@v4
+        continue-on-error: true
         with:
           path: artifacts
           pattern: tree-sitter-*
@@ -181,6 +179,7 @@ jobs:
       - name: Place WASM files into language directories
         run: |
           BUILT_LANGS=""
+          shopt -s nullglob
           for artifact_dir in artifacts/tree-sitter-*/; do
             # Extract language name: artifacts/tree-sitter-swift/ -> swift
             lang=$(basename "$artifact_dir" | sed 's/tree-sitter-//')
@@ -225,7 +224,6 @@ jobs:
 
           if git diff --staged --quiet; then
             echo "No new WASM files to commit"
-            echo "SKIP_RELEASE=true" >> $GITHUB_ENV
           else
             git commit -m "build(wasm): compile parsers for${{ env.BUILT_LANGS }}"
             git push
