@@ -36,13 +36,3 @@ args = []
 command = ""
 args = []
 
-[indexer]
-# Directories and patterns to exclude from indexing
-ignore = [
-    "**/.git/**",
-    "**/.cache/**",
-    "**/.idea/**",
-    "**/.vscode/**",
-    "**/tmp/**",
-    "**/temp/**",
-]
