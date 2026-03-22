@@ -17,7 +17,7 @@ on:
         type: string
 
 env:
-  TREE_SITTER_VERSION: "0.25.0"
+  TREE_SITTER_VERSION: "0.26.7"
 
 jobs:
   # ─── Step 1: Detect which languages need building ───
@@ -127,17 +127,29 @@ jobs:
         run: |
           cd parser-src
 
-          # Generate parser from grammar.js if src/parser.c is missing
-          if [ ! -f "src/parser.c" ]; then
+          OUT_PATH="$GITHUB_WORKSPACE/parser-src/tree-sitter-${{ matrix.language }}.wasm"
+
+          if [ -d "${{ matrix.language }}" ] && [ -f "${{ matrix.language }}/grammar.js" ]; then
+            cd "${{ matrix.language }}"
+          elif [ ! -f "grammar.js" ] && [ ! -f "src/parser.c" ]; then
+            SUBDIR=$(dirname "$(find . -name grammar.js | head -n 1)")
+            if [ -n "$SUBDIR" ]; then
+              cd "$SUBDIR"
+            fi
+          fi
+
+          if [ -f "tree-sitter.json" ]; then
+            jq 'del(.links)' tree-sitter.json > tmp.json && mv tmp.json tree-sitter.json || true
+          fi
+
+          if [ ! -f "src/parser.c" ] && [ -f "grammar.js" ]; then
             echo "Generating parser from grammar.js..."
             tree-sitter generate
           fi
 
-          # Build WASM binary
-          tree-sitter build --wasm -o tree-sitter-${{ matrix.language }}.wasm
+          tree-sitter build --wasm -o "$OUT_PATH"
 
-          # Verify output exists
-          ls -lh tree-sitter-${{ matrix.language }}.wasm
+          ls -lh "$OUT_PATH"
 
       - name: Upload WASM artifact
         uses: actions/upload-artifact@v4
