@@ -25,14 +25,6 @@ compile_cmd = "g++ -std=c++17 -o {out} {src}"
 run_cmd = "./{out}"
 test_cmd = ""
 
-[formatter]
-command = ""
-args = []
-
-[linter]
-command = ""
-args = []
-
 [indexer]
 # Directories and patterns to exclude from indexing
 ignore_folders = [

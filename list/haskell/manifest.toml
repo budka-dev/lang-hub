@@ -26,11 +26,3 @@ compile_cmd = "ghc -o {out} {src}"
 run_cmd = "./{out}"
 test_cmd = ""
 
-[formatter]
-command = ""
-args = []
-
-[linter]
-command = ""
-args = []
-

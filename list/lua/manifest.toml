@@ -26,11 +26,3 @@ compile_cmd = "luac -p {src}"
 run_cmd = "lua {src}"
 test_cmd = ""
 
-[formatter]
-command = ""
-args = []
-
-[linter]
-command = ""
-args = []
-

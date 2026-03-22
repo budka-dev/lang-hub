@@ -26,14 +26,6 @@ compile_cmd = "sass {src} {out}.css"
 run_cmd = ""
 test_cmd = ""
 
-[formatter]
-command = ""
-args = []
-
-[linter]
-command = ""
-args = []
-
 [indexer]
 # Directories and patterns to exclude from indexing
 ignore_folders = [

@@ -26,14 +26,6 @@ compile_cmd = "ruby -c {src}"
 run_cmd = "ruby {src}"
 test_cmd = ""
 
-[formatter]
-command = ""
-args = []
-
-[linter]
-command = ""
-args = []
-
 [indexer]
 # Directories and patterns to exclude from indexing
 ignore_folders = [

@@ -26,14 +26,6 @@ compile_cmd = "ng build --dry-run"
 run_cmd = "ng serve"
 test_cmd = ""
 
-[formatter]
-command = ""
-args = []
-
-[linter]
-command = ""
-args = []
-
 [indexer]
 # Directories and patterns to exclude from indexing
 ignore_folders = [

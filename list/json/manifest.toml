@@ -26,11 +26,3 @@ compile_cmd = "python3 -m json.tool {src} > /dev/null"
 run_cmd = ""
 test_cmd = ""
 
-[formatter]
-command = ""
-args = []
-
-[linter]
-command = ""
-args = []
-

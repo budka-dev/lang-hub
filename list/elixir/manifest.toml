@@ -25,14 +25,6 @@ compile_cmd = "elixirc {src}"
 run_cmd = "elixir {src}"
 test_cmd = ""
 
-[formatter]
-command = ""
-args = []
-
-[linter]
-command = ""
-args = []
-
 [indexer]
 # Directories and patterns to exclude from indexing
 ignore_folders = [

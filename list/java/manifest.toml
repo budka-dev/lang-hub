@@ -25,14 +25,6 @@ compile_cmd = "javac -d . {src}"
 run_cmd = "java {class_name}"
 test_cmd = ""
 
-[formatter]
-command = ""
-args = []
-
-[linter]
-command = ""
-args = []
-
 [indexer]
 # Directories and patterns to exclude from indexing
 ignore_folders = [

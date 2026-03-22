@@ -26,14 +26,6 @@ compile_cmd = "dotnet build -o {out_dir} {src}"
 run_cmd = "dotnet {out}"
 test_cmd = ""
 
-[formatter]
-command = ""
-args = []
-
-[linter]
-command = ""
-args = []
-
 [indexer]
 # Directories and patterns to exclude from indexing
 ignore_folders = [

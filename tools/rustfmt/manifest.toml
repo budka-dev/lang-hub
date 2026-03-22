@@ -1,0 +1,9 @@
+[tool]
+name = "rustfmt"
+description = "A tool for formatting Rust code according to style guidelines."
+capabilities = ["formatter"]
+languages = ["rust"]
+
+[formatter]
+command = "rustfmt"
+args = ["{src}"]

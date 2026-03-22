@@ -26,14 +26,6 @@ compile_cmd = "python3 -m py_compile {src}"
 run_cmd = "python3 {src}"
 test_cmd = ""
 
-[formatter]
-command = ""
-args = []
-
-[linter]
-command = ""
-args = []
-
 [indexer]
 # Directories and patterns to exclude from indexing
 ignore_folders = [

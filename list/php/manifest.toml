@@ -26,14 +26,6 @@ compile_cmd = "php -l {src}"
 run_cmd = "php {src}"
 test_cmd = ""
 
-[formatter]
-command = ""
-args = []
-
-[linter]
-command = ""
-args = []
-
 [indexer]
 # Directories and patterns to exclude from indexing
 ignore_folders = [

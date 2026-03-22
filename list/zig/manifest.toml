@@ -25,11 +25,3 @@ compile_cmd = "zig build-exe -O ReleaseFast -femit-bin={out} {src}"
 run_cmd = "./{out}"
 test_cmd = ""
 
-[formatter]
-command = ""
-args = []
-
-[linter]
-command = ""
-args = []
-
