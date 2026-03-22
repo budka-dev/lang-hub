@@ -26,9 +26,9 @@
   receiver: (constant) @reference
 )
 
-(method_call
-  method: (identifier) @call
-)
+; (method_call
+;   method: (identifier) @call
+; )
 
 (assignment
   left: (identifier) @reference
@@ -94,38 +94,38 @@
   (identifier) @reference
 )
 
-(when
-  (identifier) @reference
-)
+; (when
+;   (identifier) @reference
+; )
 
 (array
   (identifier) @reference
 )
 
-(hash
-  (identifier) @reference
-)
+; (hash
+;   (identifier) @reference
+; )
 
-(block
-  (identifier) @reference
-)
+; (block
+;   (identifier) @reference
+; )
 
-(do_block
-  (identifier) @reference
-)
+; (do_block
+;   (identifier) @reference
+; )
 
 (self) @reference
 
 (super) @reference
 
-(zsuper) @reference
+; (zsuper) @reference
 
-(require
-  (string) @import_source
-)
+; (require
+;   (string) @import_source
+; )
 
-(require_relative
-  (string) @import_source
-)
+; (require_relative
+;   (string) @import_source
+; )
 
 (constant) @type_usage

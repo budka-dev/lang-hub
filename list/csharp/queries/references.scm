@@ -96,9 +96,9 @@
   (qualified_name) @import_source
 )
 
-(using_static_directive
-  (qualified_name) @import_source
-)
+; (using_static_directive
+;   (qualified_name) @import_source
+; )
 
 (type_argument_list
   (type) @type_usage
@@ -108,6 +108,6 @@
 
 (type) @type_usage
 
-(this_expression) @reference
+; (this_expression) @reference
 
-(base_expression) @reference
+; (base_expression) @reference

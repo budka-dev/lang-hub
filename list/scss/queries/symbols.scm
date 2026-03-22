@@ -26,42 +26,42 @@
   )
 ) @nested_rule
 
-(rule_set
-  (selectors
-    (placeholder_selector
-      (identifier) @name
-    )
-  )
-) @placeholder
+; (rule_set
+;   (selectors
+;     (placeholder_selector
+;       (identifier) @name
+;     )
+;   )
+; ) @placeholder
 
-(mixin_statement
-  (name) @name
-) @mixin
+; (mixin_statement
+;   (name) @name
+; ) @mixin
 
-(function_statement
-  (name) @name
-) @function
+; (function_statement
+;   (name) @name
+; ) @function
 
-(variable_declaration
-  (variable_name) @name
-) @variable
+; (variable_declaration
+;   (variable_name) @name
+; ) @variable
 
 (at_rule
   (at_keyword) @name
 ) @at_rule
 
-(media_statement
-  (at_keyword) @name
-) @media
+; (media_statement
+;   (at_keyword) @name
+; ) @media
 
 (keyframes_statement
   (at_keyword) @name
   (keyframes_name) @keyframes_name
 ) @keyframes
 
-(supports_statement
-  (at_keyword) @name
-) @supports
+; (supports_statement
+;   (at_keyword) @name
+; ) @supports
 
 (import_statement
   (string_value) @import_source
@@ -75,25 +75,25 @@
   (string_value) @forward_source
 ) @forward
 
-(extend_statement
-  (selector
-    (class_selector
-      (class_name) @name
-    )
-  )
-) @extend
+; (extend_statement
+;   (selector
+;     (class_selector
+;       (class_name) @name
+;     )
+;   )
+; ) @extend
 
-(extend_statement
-  (selector
-    (placeholder_selector
-      (identifier) @name
-    )
-  )
-) @extend_placeholder
+; (extend_statement
+;   (selector
+;     (placeholder_selector
+;       (identifier) @name
+;     )
+;   )
+; ) @extend_placeholder
 
-(include_statement
-  (name) @name
-) @include
+; (include_statement
+;   (name) @name
+; ) @include
 
 (declaration
   (property_name) @name

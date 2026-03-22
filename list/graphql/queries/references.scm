@@ -1,26 +1,26 @@
-(type_definition
-  (name) @type_reference
-)
+; (type_definition
+;   (name) @type_reference
+; )
 
-(interface_definition
-  (name) @interface_reference
-)
+; (interface_definition
+;   (name) @interface_reference
+; )
 
-(enum_definition
-  (name) @enum_reference
-)
+; (enum_definition
+;   (name) @enum_reference
+; )
 
-(union_definition
-  (name) @union_reference
-)
+; (union_definition
+;   (name) @union_reference
+; )
 
 (scalar_type_definition
   (name) @scalar_reference
 )
 
-(input_object_definition
-  (name) @input_object_reference
-)
+; (input_object_definition
+;   (name) @input_object_reference
+; )
 
 (directive_definition
   (name) @directive_reference
@@ -44,11 +44,11 @@
   )
 )
 
-(selection_set
-  (field
-    (name) @field_selection_reference
-  )
-)
+; (selection_set
+;   (field
+;     (name) @field_selection_reference
+;   )
+; )
 
 (alias
   (name) @alias_reference

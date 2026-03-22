@@ -1,4 +1,4 @@
-(dockerfile) @dockerfile
+; (dockerfile) @dockerfile
 
 (from_instruction
   (image_spec
@@ -38,23 +38,23 @@
   (json_string_array) @command_array
 ) @cmd_json
 
-(label_instruction
-  (label_pair
-    key: (label_key) @name
-    value: (label_value) @value
-  )
-) @label
+; (label_instruction
+;   (label_pair
+;     key: (label_key) @name
+;     value: (label_value) @value
+;   )
+; ) @label
 
 (expose_instruction
   (expose_port) @port
 ) @expose
 
-(env_instruction
-  (env_pair
-    key: (env_key) @name
-    value: (env_value) @value
-  )
-) @env
+; (env_instruction
+;   (env_pair
+;     key: (env_key) @name
+;     value: (env_value) @value
+;   )
+; ) @env
 
 (add_instruction
   (path) @source
@@ -78,28 +78,28 @@
   (path) @volume
 ) @volume
 
-(user_instruction
-  (user_name) @name
-) @user
+; (user_instruction
+;   (user_name) @name
+; ) @user
 
 (workdir_instruction
   (path) @path
 ) @workdir
 
-(arg_instruction
-  (arg_name) @name
-) @arg
+; (arg_instruction
+;   (arg_name) @name
+; ) @arg
 
-(arg_instruction
-  (arg_name) @name
-  (arg_default_value) @default
-) @arg_with_default
+; (arg_instruction
+;   (arg_name) @name
+;   (arg_default_value) @default
+; ) @arg_with_default
 
 (onbuild_instruction) @onbuild
 
-(stopsignal_instruction
-  (signal) @signal
-) @stopsignal
+; (stopsignal_instruction
+;   (signal) @signal
+; ) @stopsignal
 
 (healthcheck_instruction) @healthcheck
 
@@ -107,9 +107,9 @@
   (json_string_array) @shell_array
 ) @shell
 
-(maintainer_instruction
-  (maintainer_value) @value
-) @maintainer
+; (maintainer_instruction
+;   (maintainer_value) @value
+; ) @maintainer
 
 (cross_build_instruction) @cross_build
 
@@ -117,6 +117,6 @@
 
 (line_continuation) @line_continuation
 
-(escape_directive
-  (escape_char) @escape
-) @escape
+; (escape_directive
+;   (escape_char) @escape
+; ) @escape

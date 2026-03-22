@@ -48,18 +48,18 @@
   (at_keyword) @name
 ) @at_rule
 
-(media_statement
-  (at_keyword) @name
-) @media
+; (media_statement
+;   (at_keyword) @name
+; ) @media
 
 (keyframes_statement
   (at_keyword) @name
   (keyframes_name) @keyframes_name
 ) @keyframes
 
-(supports_statement
-  (at_keyword) @name
-) @supports
+; (supports_statement
+;   (at_keyword) @name
+; ) @supports
 
 (import_statement
   (string_value) @import_source
@@ -73,9 +73,9 @@
   (property_name) @name
 ) @property
 
-(variable_declaration
-  (variable_name) @name
-) @variable
+; (variable_declaration
+;   (variable_name) @name
+; ) @variable
 
 (function_name) @function
 

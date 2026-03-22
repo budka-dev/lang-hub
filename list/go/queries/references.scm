@@ -38,9 +38,9 @@
   operand: (identifier) @reference
 )
 
-(assignment_statement
-  left: (identifier) @reference
-)
+; (assignment_statement
+;   left: (identifier) @reference
+; )
 
 (assignment_statement
   left: (expression_list

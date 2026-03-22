@@ -1,28 +1,28 @@
 (schema_definition) @schema
 
-(type_definition
-  (name) @name
-) @type
+; (type_definition
+;   (name) @name
+; ) @type
 
-(interface_definition
-  (name) @name
-) @interface
+; (interface_definition
+;   (name) @name
+; ) @interface
 
-(enum_definition
-  (name) @name
-) @enum
+; (enum_definition
+;   (name) @name
+; ) @enum
 
-(union_definition
-  (name) @name
-) @union
+; (union_definition
+;   (name) @name
+; ) @union
 
 (scalar_type_definition
   (name) @name
 ) @scalar
 
-(input_object_definition
-  (name) @name
-) @input_object
+; (input_object_definition
+;   (name) @name
+; ) @input_object
 
 (directive_definition
   (name) @name
@@ -57,11 +57,11 @@
   )
 ) @variable
 
-(selection_set
-  (field
-    (name) @name
-  )
-) @selection_field
+; (selection_set
+;   (field
+;     (name) @name
+;   )
+; ) @selection_field
 
 (alias
   (name) @name

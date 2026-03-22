@@ -6,13 +6,13 @@
   object: (identifier) @reference
 )
 
-(super_method_invocation
-  name: (identifier) @call
-)
+; (super_method_invocation
+;   name: (identifier) @call
+; )
 
-(class_instance_creation_expression
-  (identifier) @call
-)
+; (class_instance_creation_expression
+;   (identifier) @call
+; )
 
 (field_access
   field: (identifier) @reference
@@ -52,9 +52,9 @@
   (asterisk) @import_source
 )
 
-(static_import_declaration
-  (identifier) @import_source
-)
+; (static_import_declaration
+;   (identifier) @import_source
+; )
 
 (type_identifier) @type_usage
 

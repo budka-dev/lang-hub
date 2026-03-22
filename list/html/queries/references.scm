@@ -18,7 +18,7 @@
   (attribute_value) @reference
 )
 
-(unquoted_attribute_value) @reference
+; (unquoted_attribute_value) @reference
 
 (element
   (start_tag
@@ -38,11 +38,11 @@
   )
 )
 
-(template_element
-  (start_tag
-    (tag_name) @template_reference
-  )
-)
+; (template_element
+;   (start_tag
+;     (tag_name) @template_reference
+;   )
+; )
 
 (doctype) @doctype_reference
 

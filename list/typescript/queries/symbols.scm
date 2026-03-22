@@ -2,9 +2,9 @@
   name: (identifier) @name
 ) @function
 
-(function_declaration
-  name: (property_identifier) @name
-) @function
+; (function_declaration
+;   name: (property_identifier) @name
+; ) @function
 
 (method_definition
   name: (property_identifier) @name
@@ -14,9 +14,9 @@
   name: (type_identifier) @name
 ) @class
 
-(class_declaration
-  name: (identifier) @name
-) @class
+; (class_declaration
+;   name: (identifier) @name
+; ) @class
 
 (interface_declaration
   name: (type_identifier) @name
@@ -30,21 +30,21 @@
   name: (identifier) @name
 ) @enum
 
-(variable_declaration
-  (identifier) @name
-) @variable
+; (variable_declaration
+;   (identifier) @name
+; ) @variable
 
-(variable_declaration
-  (array_pattern
-    (identifier) @name
-  )
-) @variable
+; (variable_declaration
+;   (array_pattern
+;     (identifier) @name
+;   )
+; ) @variable
 
-(variable_declaration
-  (object_pattern
-    (shorthand_property_identifier_pattern) @name
-  )
-) @variable
+; (variable_declaration
+;   (object_pattern
+;     (shorthand_property_identifier_pattern) @name
+;   )
+; ) @variable
 
 (import_clause
   (identifier) @name
@@ -68,11 +68,11 @@
   )
 ) @export
 
-(export_statement
-  (class_declaration
-    name: (identifier) @name
-  )
-) @export
+; (export_statement
+;   (class_declaration
+;     name: (identifier) @name
+;   )
+; ) @export
 
 (export_statement
   (lexical_declaration

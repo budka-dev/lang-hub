@@ -54,6 +54,6 @@
   (block) @static_block
 )
 
-(instance_initializer
-  (block) @instance_block
-)
+; (instance_initializer
+;   (block) @instance_block
+; )

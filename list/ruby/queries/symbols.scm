@@ -74,30 +74,30 @@
   name: (identifier) @name
 ) @keyword_parameter
 
-(rest_parameter
-  name: (identifier) @name
-) @rest_parameter
+; (rest_parameter
+;   name: (identifier) @name
+; ) @rest_parameter
 
 (block_parameter
   name: (identifier) @name
 ) @block_param
 
-(require
-  (string) @name
-) @require
+; (require
+;   (string) @name
+; ) @require
 
-(require_relative
-  (string) @name
-) @require_relative
+; (require_relative
+;   (string) @name
+; ) @require_relative
 
-(include
-  (constant) @name
-) @include
+; (include
+;   (constant) @name
+; ) @include
 
-(extend
-  (constant) @name
-) @extend
+; (extend
+;   (constant) @name
+; ) @extend
 
-(prepend
-  (constant) @name
-) @prepend
+; (prepend
+;   (constant) @name
+; ) @prepend

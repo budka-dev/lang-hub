@@ -54,16 +54,16 @@
   name: (identifier) @name
 ) @parameter
 
-(receiver
-  name: (identifier) @name
-) @receiver
+; (receiver
+;   name: (identifier) @name
+; ) @receiver
 
-(type_parameter_declaration
-  (parameter_declaration
-    name: (identifier) @name
-  )
-) @type_parameter
+; (type_parameter_declaration
+;   (parameter_declaration
+;     name: (identifier) @name
+;   )
+; ) @type_parameter
 
-(label_statement
-  (label_name) @name
-) @label
+; (label_statement
+;   (label_name) @name
+; ) @label

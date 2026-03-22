@@ -46,21 +46,21 @@
   )
 ) @constant
 
-(class_const_declaration
-  (const_element
-    (name) @name
-  )
-) @class_constant
+; (class_const_declaration
+;   (const_element
+;     (name) @name
+;   )
+; ) @class_constant
 
-(constructor_declaration
-  (name) @name
-) @constructor
+; (constructor_declaration
+;   (name) @name
+; ) @constructor
 
-(destructor_declaration
-  (name) @name
-) @destructor
+; (destructor_declaration
+;   (name) @name
+; ) @destructor
 
-(anonymous_function_creation_expression) @anonymous_function
+; (anonymous_function_creation_expression) @anonymous_function
 
 (arrow_function) @arrow_function
 
@@ -68,17 +68,17 @@
   (variable_name) @name
 ) @global
 
-(static_declaration
-  (variable_name) @name
-) @static
+; (static_declaration
+;   (variable_name) @name
+; ) @static
 
-(parameter
-  (variable_name) @name
-) @parameter
+; (parameter
+;   (variable_name) @name
+; ) @parameter
 
-(typed_parameter
-  (variable_name) @name
-) @typed_parameter
+; (typed_parameter
+;   (variable_name) @name
+; ) @typed_parameter
 
 (attribute
   (qualified_name) @name

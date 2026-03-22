@@ -8,23 +8,23 @@
   )
 )
 
-(function_call
-  (method_index_expression
-    (property_identifier) @method_call_reference
-  )
-)
+; (function_call
+;   (method_index_expression
+;     (property_identifier) @method_call_reference
+;   )
+; )
 
 (method_index_expression
   (identifier) @reference
 )
 
-(method_index_expression
-  (property_identifier) @reference
-)
+; (method_index_expression
+;   (property_identifier) @reference
+; )
 
-(variable_declarator
-  (identifier) @reference
-)
+; (variable_declarator
+;   (identifier) @reference
+; )
 
 (assignment_statement
   (variable_list
@@ -38,17 +38,17 @@
   )
 )
 
-(for_statement
-  (identifier) @reference
-)
+; (for_statement
+;   (identifier) @reference
+; )
 
-(for_in_statement
-  (identifier) @reference
-)
+; (for_in_statement
+;   (identifier) @reference
+; )
 
-(parameter
-  (identifier) @reference
-)
+; (parameter
+;   (identifier) @reference
+; )
 
 (binary_expression
   (identifier) @reference
@@ -70,9 +70,9 @@
   (identifier) @reference
 )
 
-(return_statement
-  (identifier) @reference
-)
+; (return_statement
+;   (identifier) @reference
+; )
 
 (table_constructor
   (field
@@ -86,9 +86,9 @@
   )
 )
 
-(table_index_expression
-  (identifier) @reference
-)
+; (table_index_expression
+;   (identifier) @reference
+; )
 
 (bracket_index_expression
   (identifier) @reference
@@ -98,26 +98,26 @@
   (identifier) @reference
 )
 
-(dot_index_expression
-  (property_identifier) @reference
-)
+; (dot_index_expression
+;   (property_identifier) @reference
+; )
 
-(require_call
-  (string) @require_reference
-)
+; (require_call
+;   (string) @require_reference
+; )
 
 (string) @string_reference
 
 (number) @number_reference
 
-(boolean) @boolean_reference
+; (boolean) @boolean_reference
 
 (nil) @nil_reference
 
-(label_statement
-  (label) @label_reference
-)
+; (label_statement
+;   (label) @label_reference
+; )
 
-(goto_statement
-  (label) @label_reference
-)
+; (goto_statement
+;   (label) @label_reference
+; )

@@ -26,13 +26,13 @@
   )
 )
 
-(assignment
-  (directly_assignable_expression
-    (navigation_expression
-      (simple_identifier) @reference
-    )
-  )
-)
+; (assignment
+;   (directly_assignable_expression
+;     (navigation_expression
+;       (simple_identifier) @reference
+;     )
+;   )
+; )
 
 (property_declaration
   (variable_declaration
@@ -48,25 +48,25 @@
   (simple_identifier) @reference
 )
 
-(binary_expression
-  (simple_identifier) @reference
-)
+; (binary_expression
+;   (simple_identifier) @reference
+; )
 
-(unary_expression
-  (simple_identifier) @reference
-)
+; (unary_expression
+;   (simple_identifier) @reference
+; )
 
-(ternary_expression
-  (simple_identifier) @reference
-)
+; (ternary_expression
+;   (simple_identifier) @reference
+; )
 
 (if_expression
   (simple_identifier) @reference
 )
 
-(when_expression
-  (simple_identifier) @reference
-)
+; (when_expression
+;   (simple_identifier) @reference
+; )
 
 (for_statement
   (simple_identifier) @reference
@@ -80,17 +80,17 @@
   (simple_identifier) @reference
 )
 
-(try_expression
-  (simple_identifier) @reference
-)
+; (try_expression
+;   (simple_identifier) @reference
+; )
 
-(throw_expression
-  (simple_identifier) @reference
-)
+; (throw_expression
+;   (simple_identifier) @reference
+; )
 
-(return_expression
-  (simple_identifier) @reference
-)
+; (return_expression
+;   (simple_identifier) @reference
+; )
 
 (import_header
   (identifier) @import_reference

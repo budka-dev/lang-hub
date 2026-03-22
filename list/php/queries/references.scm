@@ -14,9 +14,9 @@
   (name) @call
 )
 
-(static_member_call_expression
-  (name) @call
-)
+; (static_member_call_expression
+;   (name) @call
+; )
 
 (object_creation_expression
   (qualified_name) @call
@@ -38,17 +38,17 @@
   (name) @reference
 )
 
-(member_access_expression
-  (dollar_variable) @reference
-)
+; (member_access_expression
+;   (dollar_variable) @reference
+; )
 
 (nullsafe_member_access_expression
   (name) @reference
 )
 
-(static_member_access_expression
-  (name) @reference
-)
+; (static_member_access_expression
+;   (name) @reference
+; )
 
 (scoped_property_access_expression
   (name) @reference
@@ -62,9 +62,9 @@
   left: (variable_name) @reference
 )
 
-(assignment_expression
-  left: (dollar_variable) @reference
-)
+; (assignment_expression
+;   left: (dollar_variable) @reference
+; )
 
 (augmented_assignment_expression
   left: (variable_name) @reference
@@ -72,7 +72,7 @@
 
 (variable_name) @variable_reference
 
-(dollar_variable) @variable_reference
+; (dollar_variable) @variable_reference
 
 (array_creation_expression) @array_reference
 

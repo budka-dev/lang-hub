@@ -34,9 +34,9 @@
 
 (thematic_break) @thematic_break
 
-(code_fence
-  (code_fence_content) @code_block
-) @fenced_code
+; (code_fence
+;   (code_fence_content) @code_block
+; ) @fenced_code
 
 (indented_code_block) @indented_code
 
@@ -44,9 +44,9 @@
   (list_item) @list_item
 ) @list
 
-(task_list_item
-  (list_marker) @task_marker
-) @task_list_item
+; (task_list_item
+;   (list_marker) @task_marker
+; ) @task_list_item
 
 (block_quote) @block_quote
 
@@ -54,13 +54,13 @@
   (link_label) @name
 ) @link_definition
 
-(footnote_reference
-  (label) @name
-) @footnote
+; (footnote_reference
+;   (label) @name
+; ) @footnote
 
-(footnote_definition
-  (label) @name
-) @footnote_definition
+; (footnote_definition
+;   (label) @name
+; ) @footnote_definition
 
 (html_block) @html_block
 

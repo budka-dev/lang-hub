@@ -22,9 +22,9 @@
   name: (identifier) @name
 ) @record
 
-(record_struct_declaration
-  name: (identifier) @name
-) @record_struct
+; (record_struct_declaration
+;   name: (identifier) @name
+; ) @record_struct
 
 (method_declaration
   name: (identifier) @name
@@ -46,21 +46,21 @@
   (bracketed_parameter_list) @name
 ) @indexer
 
-(field_declaration
-  (variable_declarator
-    name: (identifier) @name
-  )
-) @field
+; (field_declaration
+;   (variable_declarator
+;     name: (identifier) @name
+;   )
+; ) @field
 
 (event_declaration
   name: (identifier) @name
 ) @event
 
-(event_field_declaration
-  (variable_declarator
-    name: (identifier) @name
-  )
-) @event_field
+; (event_field_declaration
+;   (variable_declarator
+;     name: (identifier) @name
+;   )
+; ) @event_field
 
 (local_declaration_statement
   (variable_declaration
@@ -90,9 +90,9 @@
   name: (identifier) @name
 ) @attribute
 
-(operator_declaration
-  (overloadable_operator) @name
-) @operator
+; (operator_declaration
+;   (overloadable_operator) @name
+; ) @operator
 
 (conversion_operator_declaration
   (type) @name

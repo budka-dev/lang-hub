@@ -30,23 +30,23 @@
   (json_string_array) @cmd_json_reference
 )
 
-(label_instruction
-  (label_pair
-    key: (label_key) @label_key_reference
-    value: (label_value) @label_value_reference
-  )
-)
+; (label_instruction
+;   (label_pair
+;     key: (label_key) @label_key_reference
+;     value: (label_value) @label_value_reference
+;   )
+; )
 
 (expose_instruction
   (expose_port) @port_reference
 )
 
-(env_instruction
-  (env_pair
-    key: (env_key) @env_key_reference
-    value: (env_value) @env_value_reference
-  )
-)
+; (env_instruction
+;   (env_pair
+;     key: (env_key) @env_key_reference
+;     value: (env_value) @env_value_reference
+;   )
+; )
 
 (add_instruction
   (path) @add_source_reference
@@ -76,27 +76,27 @@
   (path) @volume_reference
 )
 
-(user_instruction
-  (user_name) @user_reference
-)
+; (user_instruction
+;   (user_name) @user_reference
+; )
 
 (workdir_instruction
   (path) @workdir_reference
 )
 
-(arg_instruction
-  (arg_name) @arg_name_reference
-)
+; (arg_instruction
+;   (arg_name) @arg_name_reference
+; )
 
-(arg_instruction
-  (arg_default_value) @arg_default_reference
-)
+; (arg_instruction
+;   (arg_default_value) @arg_default_reference
+; )
 
 (onbuild_instruction) @onbuild_reference
 
-(stopsignal_instruction
-  (signal) @signal_reference
-)
+; (stopsignal_instruction
+;   (signal) @signal_reference
+; )
 
 (healthcheck_instruction) @healthcheck_reference
 
@@ -104,9 +104,9 @@
   (json_string_array) @shell_reference
 )
 
-(maintainer_instruction
-  (maintainer_value) @maintainer_reference
-)
+; (maintainer_instruction
+;   (maintainer_value) @maintainer_reference
+; )
 
 (cross_build_instruction) @cross_build_reference
 

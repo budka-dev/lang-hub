@@ -18,19 +18,19 @@
   right: (identifier) @dot_right_reference
 )
 
-(variable) @variable_reference
+; (variable) @variable_reference
 
 (alias) @alias_reference
 
-(function_identifier) @function_reference
+; (function_identifier) @function_reference
 
 (arguments
   (identifier) @argument_reference
 )
 
-(arguments
-  (variable) @argument_variable_reference
-)
+; (arguments
+;   (variable) @argument_variable_reference
+; )
 
 (arguments
   (call) @argument_call_reference
@@ -48,9 +48,9 @@
   operand: (identifier) @unary_operand_reference
 )
 
-(unary_operator
-  operand: (variable) @unary_variable_reference
-)
+; (unary_operator
+;   operand: (variable) @unary_variable_reference
+; )
 
 (access_call
   (identifier) @access_reference
@@ -80,9 +80,9 @@
   (identifier) @tuple_element_reference
 )
 
-(map
-  (identifier) @map_element_reference
-)
+; (map
+;   (identifier) @map_element_reference
+; )
 
 (struct
   (alias) @struct_reference
@@ -98,30 +98,30 @@
   )
 )
 
-(heredoc
-  (interpolation
-    (identifier) @heredoc_interpolation_reference
-  )
-)
+; (heredoc
+;   (interpolation
+;     (identifier) @heredoc_interpolation_reference
+;   )
+; )
 
 (atom) @atom_reference
 
-(keyword
-  (keyword_key) @keyword_key_reference
-)
+; (keyword
+;   (keyword_key) @keyword_key_reference
+; )
 
-(require
-  (alias) @require_reference
-)
+; (require
+;   (alias) @require_reference
+; )
 
-(import
-  (alias) @import_reference
-)
+; (import
+;   (alias) @import_reference
+; )
 
-(alias_directive
-  (alias) @alias_directive_reference
-)
+; (alias_directive
+;   (alias) @alias_directive_reference
+; )
 
-(use_directive
-  (alias) @use_reference
-)
+; (use_directive
+;   (alias) @use_reference
+; )

@@ -12,17 +12,17 @@
   (identifier) @reference
 )
 
-(field_expression
-  (field_identifier) @reference
-)
+; (field_expression
+;   (field_identifier) @reference
+; )
 
-(array_access_expression
-  (identifier) @reference
-)
+; (array_access_expression
+;   (identifier) @reference
+; )
 
-(slice_expression
-  (identifier) @reference
-)
+; (slice_expression
+;   (identifier) @reference
+; )
 
 (assignment_expression
   left: (identifier) @reference
@@ -34,19 +34,19 @@
   )
 )
 
-(assignment_expression
-  left: (array_access_expression
-    (identifier) @reference
-  )
-)
+; (assignment_expression
+;   left: (array_access_expression
+;     (identifier) @reference
+;   )
+; )
 
 (variable_declaration
   (identifier) @reference
 )
 
-(const_declaration
-  (identifier) @reference
-)
+; (const_declaration
+;   (identifier) @reference
+; )
 
 (binary_expression
   left: (identifier) @reference
@@ -68,9 +68,9 @@
   (identifier) @reference
 )
 
-(orelse_expression
-  (identifier) @reference
-)
+; (orelse_expression
+;   (identifier) @reference
+; )
 
 (if_expression
   condition: (identifier) @reference
@@ -88,18 +88,18 @@
   (identifier) @reference
 )
 
-(builtin_function
-  (identifier) @reference
-)
+; (builtin_function
+;   (identifier) @reference
+; )
 
-(import_declaration
-  (string) @import_source
-)
+; (import_declaration
+;   (string) @import_source
+; )
 
-(usingnamespace_declaration
-  (string) @import_source
-)
+; (usingnamespace_declaration
+;   (string) @import_source
+; )
 
-(type_identifier) @type_usage
+; (type_identifier) @type_usage
 
 (builtin_type) @type_usage

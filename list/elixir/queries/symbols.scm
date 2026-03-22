@@ -8,17 +8,17 @@
   (#match? @def_name "^(def|defp|defmacro|defmacrop|defguard|defguardp|defdelegate|defcallback|defmacrocallback|defoptional_callback|defimpl|defprotocol|defstruct|defexception|defmodule)$")
 ) @definition
 
-(defmodule
-  (alias) @name
-) @module
+; (defmodule
+;   (alias) @name
+; ) @module
 
-(defprotocol
-  (alias) @name
-) @protocol
+; (defprotocol
+;   (alias) @name
+; ) @protocol
 
-(defimpl
-  (alias) @name
-) @impl
+; (defimpl
+;   (alias) @name
+; ) @impl
 
 (alias) @alias
 
@@ -54,9 +54,9 @@
   (#eq? @alias_name "alias")
 ) @alias_directive
 
-(function_identifier) @function_name
+; (function_identifier) @function_name
 
-(variable) @variable
+; (variable) @variable
 
 (unary_operator
   operator: "@"
@@ -92,11 +92,11 @@
 
 (string) @string
 
-(heredoc) @heredoc
+; (heredoc) @heredoc
 
 (atom) @atom
 
-(keyword_list) @keyword_list
+; (keyword_list) @keyword_list
 
 (boolean) @boolean
 
@@ -108,6 +108,6 @@
 
 (comment) @comment
 
-(unary_operator
-  operator: "_"
-) @unused
+; (unary_operator
+;   operator: "_"
+; ) @unused

@@ -2,17 +2,17 @@
   (module_id) @name
 ) @module
 
-(export
-  (export_item) @export
-) @export_list
+; (export
+;   (export_item) @export
+; ) @export_list
 
-(import
-  (module_id) @name
-) @import
+; (import
+;   (module_id) @name
+; ) @import
 
-(qualified_import
-  (module_id) @name
-) @qualified_import
+; (qualified_import
+;   (module_id) @name
+; ) @qualified_import
 
 (declaration
   (signature
@@ -40,39 +40,39 @@
   (type) @name
 ) @newtype
 
-(type_synonym
-  (type) @name
-) @type_synonym
+; (type_synonym
+;   (type) @name
+; ) @type_synonym
 
-(class
-  (class_head
-    (type) @name
-  )
-) @class
+; (class
+;   (class_head
+;     (type) @name
+;   )
+; ) @class
 
-(instance
-  (instance_head
-    (type) @name
-  )
-) @instance
+; (instance
+;   (instance_head
+;     (type) @name
+;   )
+; ) @instance
 
-(derive_declaration
-  (derive_head
-    (type) @name
-  )
-) @derive
+; (derive_declaration
+;   (derive_head
+;     (type) @name
+;   )
+; ) @derive
 
-(foreign_import
-  (call_convention) @convention
-) @foreign_import
+; (foreign_import
+;   (call_convention) @convention
+; ) @foreign_import
 
-(foreign_export
-  (call_convention) @convention
-) @foreign_export
+; (foreign_export
+;   (call_convention) @convention
+; ) @foreign_export
 
-(pattern_synonym
-  (pattern) @name
-) @pattern_synonym
+; (pattern_synonym
+;   (pattern) @name
+; ) @pattern_synonym
 
 (type_family
   (type) @name
@@ -82,14 +82,14 @@
   (type) @name
 ) @data_family
 
-(type_role_declaration
-  (type) @name
-) @type_role
+; (type_role_declaration
+;   (type) @name
+; ) @type_role
 
-(default_declaration) @default
+; (default_declaration) @default
 
-(fixity_declaration
-  (infix) @fixity
-) @fixity
+; (fixity_declaration
+;   (infix) @fixity
+; ) @fixity
 
 (pragma) @pragma

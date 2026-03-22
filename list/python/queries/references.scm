@@ -8,11 +8,11 @@
   )
 )
 
-(call
-  function: (qualified_expression
-    (identifier) @call
-  )
-)
+; (call
+;   function: (qualified_expression
+;     (identifier) @call
+;   )
+; )
 
 (attribute
   object: (identifier) @reference

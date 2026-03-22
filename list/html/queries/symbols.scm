@@ -24,11 +24,11 @@
   )
 ) @style
 
-(template_element
-  (start_tag
-    (tag_name) @name
-  )
-) @template
+; (template_element
+;   (start_tag
+;     (tag_name) @name
+;   )
+; ) @template
 
 (start_tag
   (attribute

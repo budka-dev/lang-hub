@@ -6,13 +6,13 @@
   (identifier) @name
 ) @variable
 
-(const_declaration
-  (identifier) @name
-) @constant
+; (const_declaration
+;   (identifier) @name
+; ) @constant
 
-(parameter_declaration
-  (identifier) @name
-) @parameter
+; (parameter_declaration
+;   (identifier) @name
+; ) @parameter
 
 (struct_declaration
   (identifier) @name
@@ -34,42 +34,42 @@
   (string) @name
 ) @test
 
-(comptime_declaration
-  (identifier) @name
-) @comptime_var
+; (comptime_declaration
+;   (identifier) @name
+; ) @comptime_var
 
-(usingnamespace_declaration
-  (identifier) @name
-) @usingnamespace
+; (usingnamespace_declaration
+;   (identifier) @name
+; ) @usingnamespace
 
 (container_field
   (identifier) @name
 ) @field
 
-(pointer_declaration
-  (identifier) @name
-) @pointer
+; (pointer_declaration
+;   (identifier) @name
+; ) @pointer
 
-(array_declaration
-  (identifier) @name
-) @array
+; (array_declaration
+;   (identifier) @name
+; ) @array
 
-(slice_declaration
-  (identifier) @name
-) @slice
+; (slice_declaration
+;   (identifier) @name
+; ) @slice
 
-(option_declaration
-  (identifier) @name
-) @option
+; (option_declaration
+;   (identifier) @name
+; ) @option
 
-(error_union_declaration
-  (identifier) @name
-) @error_union
+; (error_union_declaration
+;   (identifier) @name
+; ) @error_union
 
-(fn_proto
-  (identifier) @name
-) @function_proto
+; (fn_proto
+;   (identifier) @name
+; ) @function_proto
 
-(builtin_function
-  (identifier) @name
-) @builtin
+; (builtin_function
+;   (identifier) @name
+; ) @builtin

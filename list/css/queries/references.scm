@@ -12,7 +12,7 @@
 
 (property_name) @reference
 
-(variable_name) @reference
+; (variable_name) @reference
 
 (function_name) @reference
 
@@ -22,39 +22,39 @@
 
 (namespace_name) @reference
 
-(selector
-  (class_selector
-    (class_name) @reference
-  )
-)
+; (selector
+;   (class_selector
+;     (class_name) @reference
+;   )
+; )
 
-(selector
-  (id_selector
-    (id_name) @reference
-  )
-)
+; (selector
+;   (id_selector
+;     (id_name) @reference
+;   )
+; )
 
-(selector
-  (attribute_selector
-    (attribute_name) @reference
-  )
-)
+; (selector
+;   (attribute_selector
+;     (attribute_name) @reference
+;   )
+; )
 
 (call_expression
   (function_name) @reference
 )
 
-(var_expression
-  (variable_name) @reference
-)
+; (var_expression
+;   (variable_name) @reference
+; )
 
-(url_image
-  (string_value) @url_source
-)
+; (url_image
+;   (string_value) @url_source
+; )
 
-(url_fn
-  (string_value) @url_source
-)
+; (url_fn
+;   (string_value) @url_source
+; )
 
 (import_statement
   (string_value) @import_source

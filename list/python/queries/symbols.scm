@@ -72,9 +72,9 @@
   )
 ) @import
 
-(alias
-  name: (identifier) @name
-) @import
+; (alias
+;   name: (identifier) @name
+; ) @import
 
 (aliased_import
   name: (dotted_name
