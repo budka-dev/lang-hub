@@ -36,21 +36,8 @@ args = []
 [indexer]
 # Directories and patterns to exclude from indexing
 ignore = [
-    "**/node_modules/**",
-    "**/target/**",
     "**/.git/**",
-    "**/dist/**",
-    "**/build/**",
-    "**/.next/**",
-    "**/.nuxt/**",
     "**/.cache/**",
-    "**/coverage/**",
-    "**/__pycache__/**",
-    "**/.pytest_cache/**",
-    "**/vendor/**",
-    "**/.venv/**",
-    "**/venv/**",
-    "**/out/**",
     "**/.idea/**",
     "**/.vscode/**",
     "**/tmp/**",
