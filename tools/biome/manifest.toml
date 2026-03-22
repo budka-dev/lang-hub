@@ -1,9 +1,9 @@
 [tool]
 name = "biome"
 description = "Web project toolchain for formatting and linting"
-capabilities = ["formatter", "linter"]
+capabilities = ["formatter", "linter", "lsp"]
 
-[tool.download]
+[tool.install.binary]
 url = "https://github.com/biomejs/biome/releases/download/cli%2F1.9.3/biome-linux-x64"
 executable_name = "biome"
 
@@ -14,3 +14,7 @@ args = ["format", "--write"]
 [linter]
 command = "biome"
 args = ["lint", "--apply"]
+
+[lsp]
+command = "biome"
+args = ["lsp-proxy"]

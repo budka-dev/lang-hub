@@ -19,6 +19,7 @@ name = "pyright"
 download_url = "https://registry.npmjs.org/pyright/-/pyright-latest.tgz"
 command = "pyright-langserver"
 args = ["--stdio"]
+tool = "ruff"
 
 [lsp.init_options]
 [sandbox]

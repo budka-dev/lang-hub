@@ -19,6 +19,7 @@ download_url = "https://github.com/tree-sitter/tree-sitter-rust/releases/latest/
 name = "rust-analyzer"
 download_url = "https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-{os}-{arch}.gz"
 command = "rust-analyzer"
+tool = "rust-analyzer"
 
 [lsp.init_options]
 [sandbox]

@@ -3,7 +3,7 @@ name = "php-cs-fixer"
 description = "PHP formatter"
 capabilities = ["formatter"]
 
-[tool.download]
+[tool.install.binary]
 url = "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/releases/download/v3.64.0/php-cs-fixer.phar"
 executable_name = "php-cs-fixer.phar"
 [formatter]

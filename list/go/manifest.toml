@@ -19,6 +19,7 @@ name = "gopls"
 # Binaries are not provided on GitHub Releases. Install via: go install golang.org/x/tools/gopls@latest
 download_url = ""
 command = "gopls"
+tool = "gopls"
 
 [lsp.init_options]
 [sandbox]

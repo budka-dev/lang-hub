@@ -18,6 +18,7 @@ download_url = "https://github.com/tree-sitter/tree-sitter-cpp/releases/latest/d
 name = "clangd"
 download_url = "https://github.com/clangd/clangd/releases/latest/download/clangd-{os}-{arch}.zip"
 command = "clangd"
+tool = "clangd"
 
 [lsp.init_options]
 [sandbox]

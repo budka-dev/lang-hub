@@ -19,6 +19,7 @@ name = "volar"
 download_url = "https://registry.npmjs.org/@volar/vue-language-server/-/vue-language-server-latest.tgz"
 command = "vue-language-server"
 args = ["--stdio"]
+tool = "vue-language-server"
 
 [lsp.init_options]
 [sandbox]

@@ -1,0 +1,14 @@
+[tool]
+name = "vue-language-server"
+description = "Vue Language Server"
+capabilities = ["lsp"]
+
+[tool.install.registry]
+runtime = "node"
+package = "@vue/language-server"
+version = "latest"
+entrypoint = "bin/vue-language-server.js"
+
+[lsp]
+command = "node"
+args = ["{entrypoint}", "--stdio"]

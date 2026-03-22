@@ -3,7 +3,7 @@ name = "stylua"
 description = "Lua formatter"
 capabilities = ["formatter"]
 
-[tool.download]
+[tool.install.binary]
 url = "https://github.com/JohnnyMorganz/StyLua/releases/download/v0.20.0/stylua-linux-x86_64.zip"
 executable_name = "stylua"
 [formatter]

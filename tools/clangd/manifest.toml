@@ -1,0 +1,11 @@
+[tool]
+name = "clangd"
+description = "C/C++ language server"
+capabilities = ["lsp"]
+
+[tool.install.binary]
+url = "https://github.com/clangd/clangd/releases/download/17.0.3/clangd-linux-17.0.3.zip"
+executable_name = "clangd"
+
+[lsp]
+command = "clangd"

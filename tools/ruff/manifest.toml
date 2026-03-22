@@ -1,9 +1,9 @@
 [tool]
 name = "ruff"
 description = "An extremely fast Python linter and code formatter, written in Rust."
-capabilities = ["formatter", "linter"]
+capabilities = ["formatter", "linter", "lsp"]
 
-[tool.download]
+[tool.install.binary]
 url = "https://github.com/astral-sh/ruff/releases/download/0.6.8/ruff-x86_64-unknown-linux-gnu.tar.gz"
 executable_name = "ruff"
 
@@ -14,3 +14,7 @@ args = ["format"]
 [linter]
 command = "ruff"
 args = ["check", "--fix"]
+
+[lsp]
+command = "ruff"
+args = ["server"]

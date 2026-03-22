@@ -3,7 +3,7 @@ name = "hadolint"
 description = "Dockerfile linter"
 capabilities = ["linter"]
 
-[tool.download]
+[tool.install.binary]
 url = "https://github.com/hadolint/hadolint/releases/download/v2.12.0/hadolint-Linux-x86_64"
 executable_name = "hadolint"
 [linter]

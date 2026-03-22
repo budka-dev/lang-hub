@@ -1,0 +1,11 @@
+[tool]
+name = "lua-language-server"
+description = "Lua language server"
+capabilities = ["lsp"]
+
+[tool.install.binary]
+url = "https://github.com/LuaLS/lua-language-server/releases/download/3.7.4/lua-language-server-3.7.4-linux-x64.tar.gz"
+executable_name = "lua-language-server"
+
+[lsp]
+command = "lua-language-server"

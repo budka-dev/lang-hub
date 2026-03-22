@@ -19,6 +19,7 @@ name = "typescript-language-server"
 download_url = "https://registry.npmjs.org/typescript-language-server/-/typescript-language-server-latest.tgz"
 command = "typescript-language-server"
 args = ["--stdio"]
+tool = "deno"
 
 [lsp.init_options]
 [sandbox]

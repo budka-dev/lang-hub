@@ -3,7 +3,7 @@ name = "taplo"
 description = "TOML toolkit"
 capabilities = ["formatter", "linter"]
 
-[tool.download]
+[tool.install.binary]
 url = "https://github.com/tamasfe/taplo/releases/download/0.10.0/taplo-linux-x86_64.gz"
 executable_name = "taplo"
 [formatter]

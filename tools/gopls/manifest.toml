@@ -1,0 +1,11 @@
+[tool]
+name = "gopls"
+description = "Go language server"
+capabilities = ["lsp"]
+
+[tool.install.binary]
+url = "https://github.com/golang/tools/releases/download/gopls%2Fv0.15.2/gopls_0.15.2_linux_amd64.tar.gz"
+executable_name = "gopls"
+
+[lsp]
+command = "gopls"

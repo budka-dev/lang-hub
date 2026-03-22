@@ -1,0 +1,11 @@
+[tool]
+name = "rust-analyzer"
+description = "Rust compiler front-end for IDEs"
+capabilities = ["lsp"]
+
+[tool.install.binary]
+url = "https://github.com/rust-lang/rust-analyzer/releases/download/2024-03-18/rust-analyzer-x86_64-unknown-linux-gnu.gz"
+executable_name = "rust-analyzer"
+
+[lsp]
+command = "rust-analyzer"

@@ -3,7 +3,7 @@ name = "ormolu"
 description = "Haskell formatter"
 capabilities = ["formatter"]
 
-[tool.download]
+[tool.install.binary]
 url = "https://github.com/tweag/ormolu/releases/download/0.8.0.2/ormolu-x86_64-linux.zip"
 executable_name = "ormolu"
 [formatter]
