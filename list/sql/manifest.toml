@@ -26,7 +26,6 @@ args = ["up", "--method", "stdio"]
 [sandbox]
 compile_cmd = "sqlite3 :memory: '.read {src}'"
 run_cmd = ""
-test_cmd = ""
 
 [formatter]
 tool = "sqlfluff"

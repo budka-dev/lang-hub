@@ -24,7 +24,10 @@ args = ["--stdio"]
 [sandbox]
 compile_cmd = "php -l {src}"
 run_cmd = "php {src}"
-test_cmd = ""
+package_manager = "composer"
+test = ["vendor/bin/phpunit"]
+script = ["php", "{src}"]
+repl = ["php", "-a"]
 
 [indexer]
 # Directories and patterns to exclude from indexing

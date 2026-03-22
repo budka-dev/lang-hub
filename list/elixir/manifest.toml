@@ -23,7 +23,10 @@ command = "language_server.sh"
 [sandbox]
 compile_cmd = "elixirc {src}"
 run_cmd = "elixir {src}"
-test_cmd = ""
+package_manager = "mix"
+test = ["mix", "test"]
+build = ["mix", "compile"]
+repl = ["iex"]
 
 [indexer]
 # Directories and patterns to exclude from indexing

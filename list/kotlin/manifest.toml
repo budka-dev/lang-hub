@@ -24,7 +24,6 @@ command = "kotlin-language-server"
 [sandbox]
 compile_cmd = "kotlinc -d {out}.jar {src}"
 run_cmd = "kotlin -cp {out}.jar {class_name}"
-test_cmd = ""
 
 [indexer]
 # Directories and patterns to exclude from indexing

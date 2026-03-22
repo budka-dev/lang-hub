@@ -24,7 +24,6 @@ args = ["--stdio"]
 [sandbox]
 compile_cmd = "svelte-check --workspace {src}"
 run_cmd = "npm run dev"
-test_cmd = ""
 
 [indexer]
 # Directories and patterns to exclude from indexing

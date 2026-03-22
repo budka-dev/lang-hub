@@ -23,7 +23,9 @@ command = "zls"
 [sandbox]
 compile_cmd = "zig build-exe -O ReleaseFast -femit-bin={out} {src}"
 run_cmd = "./{out}"
-test_cmd = ""
+build = ["zig", "build"]
+test = ["zig", "build", "test"]
+run = ["zig", "build", "run"]
 
 [formatter]
 tool = "zig"

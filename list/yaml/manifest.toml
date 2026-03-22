@@ -24,7 +24,6 @@ args = ["--stdio"]
 [sandbox]
 compile_cmd = "python3 -c 'import yaml; yaml.safe_load(open(\"{src}\"))'"
 run_cmd = ""
-test_cmd = ""
 
 [formatter]
 tool = "prettier"

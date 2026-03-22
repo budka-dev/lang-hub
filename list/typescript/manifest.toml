@@ -25,7 +25,10 @@ tool = "deno"
 [sandbox]
 compile_cmd = "tsc --outFile {out} {src}"
 run_cmd = "node {out}"
-test_cmd = ""
+package_manager = "npm"
+test = ["npm", "test"]
+run = ["npm", "start"]
+script = ["ts-node", "{src}"]
 
 [indexer]
 # Directories and patterns to exclude from indexing

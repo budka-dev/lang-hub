@@ -24,7 +24,6 @@ args = ["lsp", "stdio"]
 [sandbox]
 compile_cmd = ""
 run_cmd = ""
-test_cmd = ""
 
 [formatter]
 tool = "taplo"

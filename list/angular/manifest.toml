@@ -24,7 +24,6 @@ args = ["--stdio"]
 [sandbox]
 compile_cmd = "ng build --dry-run"
 run_cmd = "ng serve"
-test_cmd = ""
 
 [indexer]
 # Directories and patterns to exclude from indexing

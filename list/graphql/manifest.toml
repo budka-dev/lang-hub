@@ -24,7 +24,6 @@ args = ["server", "-m", "stream"]
 [sandbox]
 compile_cmd = "node -e \"const { parse } = require('graphql'); parse(require('fs').readFileSync('{src}', 'utf8'))\""
 run_cmd = ""
-test_cmd = ""
 
 [formatter]
 tool = "prettier"

@@ -25,7 +25,11 @@ tool = "rust-analyzer"
 [sandbox]
 compile_cmd = "rustc -o {out} {src}"
 run_cmd = "./{out}"
-test_cmd = ""
+package_manager = "cargo"
+test = ["cargo", "test"]
+build = ["cargo", "build"]
+run = ["cargo", "run"]
+script = ["rust-script", "{src}"]
 
 [indexer]
 # Directories and patterns to exclude from indexing

@@ -24,7 +24,6 @@ args = ["--lsp"]
 [sandbox]
 compile_cmd = "ghc -o {out} {src}"
 run_cmd = "./{out}"
-test_cmd = ""
 
 [formatter]
 tool = "ormolu"

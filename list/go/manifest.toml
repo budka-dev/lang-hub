@@ -25,7 +25,10 @@ tool = "gopls"
 [sandbox]
 compile_cmd = "go build -o {out} {src}"
 run_cmd = "./{out}"
-test_cmd = ""
+package_manager = "go"
+test = ["go", "test", "./..."]
+build = ["go", "build"]
+run = ["go", "run", "."]
 
 [indexer]
 # Directories and patterns to exclude from indexing

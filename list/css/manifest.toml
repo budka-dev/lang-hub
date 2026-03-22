@@ -24,7 +24,6 @@ args = ["--stdio"]
 [sandbox]
 compile_cmd = ""
 run_cmd = ""
-test_cmd = ""
 
 [indexer]
 # Directories and patterns to exclude from indexing

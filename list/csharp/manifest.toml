@@ -24,7 +24,10 @@ args = ["-lsp"]
 [sandbox]
 compile_cmd = "dotnet build -o {out_dir} {src}"
 run_cmd = "dotnet {out}"
-test_cmd = ""
+package_manager = "nuget"
+build = ["dotnet", "build"]
+test = ["dotnet", "test"]
+run = ["dotnet", "run"]
 
 [indexer]
 # Directories and patterns to exclude from indexing

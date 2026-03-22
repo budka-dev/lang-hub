@@ -25,7 +25,11 @@ tool = "ruff"
 [sandbox]
 compile_cmd = "python3 -m py_compile {src}"
 run_cmd = "python3 {src}"
-test_cmd = ""
+package_manager = "pip"
+test = ["pytest"]
+run = ["python", "main.py"]
+script = ["python", "{src}"]
+repl = ["python"]
 
 [indexer]
 # Directories and patterns to exclude from indexing

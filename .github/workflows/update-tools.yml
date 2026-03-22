@@ -1,0 +1,32 @@
+name: Auto-Update Tools
+
+on:
+  schedule:
+    - cron: '0 0 * * 0' # Every Sunday at midnight
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  update-tools:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          
+      - name: Run updater script
+        run: |
+          pip install tomlkit
+          python scripts/auto_updater.py
+          
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: auto-update tool binary versions"
+          title: "chore: Auto-update tool versions"
+          body: "Automated PR to bump binary download URLs in `tools/*/manifest.toml` to their latest GitHub releases."
+          branch: "auto-update-tools"
+          delete-branch: true

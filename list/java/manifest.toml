@@ -23,7 +23,9 @@ command = "jdtls"
 [sandbox]
 compile_cmd = "javac -d . {src}"
 run_cmd = "java {class_name}"
-test_cmd = ""
+package_manager = "gradle"
+test = ["./gradlew", "test"]
+build = ["./gradlew", "build"]
 
 [indexer]
 # Directories and patterns to exclude from indexing

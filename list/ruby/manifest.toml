@@ -24,7 +24,10 @@ args = ["stdio"]
 [sandbox]
 compile_cmd = "ruby -c {src}"
 run_cmd = "ruby {src}"
-test_cmd = ""
+package_manager = "bundler"
+test = ["rspec"]
+script = ["ruby", "{src}"]
+repl = ["irb"]
 
 [indexer]
 # Directories and patterns to exclude from indexing

@@ -24,7 +24,6 @@ args = ["--stdio"]
 [sandbox]
 compile_cmd = "docker build -f {src} -t test-build ."
 run_cmd = ""
-test_cmd = ""
 
 [linter]
 tool = "hadolint"

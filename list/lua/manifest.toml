@@ -25,7 +25,9 @@ tool = "lua-language-server"
 [sandbox]
 compile_cmd = "luac -p {src}"
 run_cmd = "lua {src}"
-test_cmd = ""
+package_manager = "luarocks"
+script = ["lua", "{src}"]
+repl = ["lua"]
 
 [formatter]
 tool = "stylua"

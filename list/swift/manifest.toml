@@ -26,7 +26,9 @@ command = "sourcekit-lsp"
 [sandbox]
 compile_cmd = "swift build"
 run_cmd = "swift run"
-test_cmd = ""
+package_manager = "spm"
+build = ["swift", "build"]
+test = ["swift", "test"]
 
 [formatter]
 tool = "swiftformat"

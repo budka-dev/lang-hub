@@ -24,7 +24,8 @@ tool = "clangd"
 [sandbox]
 compile_cmd = "gcc -o {out} {src}"
 run_cmd = "./{out}"
-test_cmd = ""
+build = ["make"]
+test = ["make", "test"]
 
 [indexer]
 # Directories and patterns to exclude from indexing
