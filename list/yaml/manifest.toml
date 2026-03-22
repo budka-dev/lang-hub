@@ -1,7 +1,13 @@
 [language]
 name = "yaml"
 extensions = ["yaml", "yml"]
+aliases = ["yaml"]
+root_markers = [".git"]
 
+[language.comments]
+line = "#"
+block = ["/*", "*/"]
+doc = "///"
 [parser]
 type = "wasm"
 source = "build"
@@ -14,6 +20,16 @@ download_url = "https://registry.npmjs.org/yaml-language-server/-/yaml-language-
 command = "yaml-language-server"
 args = ["--stdio"]
 
+[lsp.init_options]
 [sandbox]
 compile_cmd = "python3 -c 'import yaml; yaml.safe_load(open(\"{src}\"))'"
 run_cmd = ""
+test_cmd = ""
+
+[formatter]
+command = ""
+args = []
+
+[linter]
+command = ""
+args = []

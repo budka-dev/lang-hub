@@ -1,7 +1,13 @@
 [language]
 name = "graphql"
 extensions = ["graphql", "gql"]
+aliases = ["graphql"]
+root_markers = [".git"]
 
+[language.comments]
+line = "#"
+block = ["/*", "*/"]
+doc = "///"
 [parser]
 type = "wasm"
 source = "build"
@@ -14,6 +20,16 @@ download_url = "https://registry.npmjs.org/graphql-language-service-cli/-/graphq
 command = "graphql-lsp"
 args = ["server", "-m", "stream"]
 
+[lsp.init_options]
 [sandbox]
 compile_cmd = "node -e \"const { parse } = require('graphql'); parse(require('fs').readFileSync('{src}', 'utf8'))\""
 run_cmd = ""
+test_cmd = ""
+
+[formatter]
+command = ""
+args = []
+
+[linter]
+command = ""
+args = []

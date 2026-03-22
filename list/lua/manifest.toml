@@ -1,7 +1,13 @@
 [language]
 name = "lua"
 extensions = ["lua"]
+aliases = ["lua"]
+root_markers = [".git"]
 
+[language.comments]
+line = "--"
+block = ["--[[", "]]"]
+doc = "///"
 [parser]
 type = "wasm"
 source = "build"
@@ -14,6 +20,16 @@ name = "lua-language-server"
 download_url = "https://github.com/LuaLS/lua-language-server/releases/latest/download/lua-language-server-{os}-{arch}.tar.gz"
 command = "lua-language-server"
 
+[lsp.init_options]
 [sandbox]
 compile_cmd = "luac -p {src}"
 run_cmd = "lua {src}"
+test_cmd = ""
+
+[formatter]
+command = ""
+args = []
+
+[linter]
+command = ""
+args = []

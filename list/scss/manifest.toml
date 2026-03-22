@@ -1,7 +1,13 @@
 [language]
 name = "scss"
 extensions = ["scss", "sass"]
+aliases = ["scss"]
+root_markers = ["package.json", ".git"]
 
+[language.comments]
+line = "//"
+block = ["/*", "*/"]
+doc = "///"
 [parser]
 type = "wasm"
 source = "build"
@@ -14,6 +20,16 @@ download_url = "https://registry.npmjs.org/vscode-langservers-extracted/-/vscode
 command = "vscode-css-language-server"
 args = ["--stdio"]
 
+[lsp.init_options]
 [sandbox]
 compile_cmd = "sass {src} {out}.css"
 run_cmd = ""
+test_cmd = ""
+
+[formatter]
+command = ""
+args = []
+
+[linter]
+command = ""
+args = []

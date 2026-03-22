@@ -1,7 +1,13 @@
 [language]
 name = "typescript"
 extensions = ["ts", "tsx", "js", "jsx", "mjs", "cjs"]
+aliases = ["typescript", "js", "ts", "jsx", "tsx"]
+root_markers = ["package.json", ".git"]
 
+[language.comments]
+line = "//"
+block = ["/*", "*/"]
+doc = "///"
 [parser]
 type = "wasm"
 source = "prebuilt"
@@ -14,6 +20,16 @@ download_url = "https://registry.npmjs.org/typescript-language-server/-/typescri
 command = "typescript-language-server"
 args = ["--stdio"]
 
+[lsp.init_options]
 [sandbox]
 compile_cmd = "tsc --outFile {out} {src}"
 run_cmd = "node {out}"
+test_cmd = ""
+
+[formatter]
+command = ""
+args = []
+
+[linter]
+command = ""
+args = []

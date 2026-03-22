@@ -1,7 +1,13 @@
 [language]
 name = "java"
 extensions = ["java"]
+aliases = ["java"]
+root_markers = ["build.gradle", "pom.xml", ".git"]
 
+[language.comments]
+line = "//"
+block = ["/*", "*/"]
+doc = "///"
 [parser]
 type = "wasm"
 source = "prebuilt"
@@ -13,6 +19,16 @@ name = "jdtls"
 download_url = "https://download.eclipse.org/jdtls/snapshots/jdt-language-server-latest.tar.gz"
 command = "jdtls"
 
+[lsp.init_options]
 [sandbox]
 compile_cmd = "javac -d . {src}"
 run_cmd = "java {class_name}"
+test_cmd = ""
+
+[formatter]
+command = ""
+args = []
+
+[linter]
+command = ""
+args = []

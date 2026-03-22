@@ -1,7 +1,13 @@
 [language]
 name = "haskell"
 extensions = ["hs", "lhs"]
+aliases = ["haskell"]
+root_markers = []
 
+[language.comments]
+line = "//"
+block = ["/*", "*/"]
+doc = "///"
 [parser]
 type = "wasm"
 source = "prebuilt"
@@ -14,6 +20,16 @@ download_url = "https://github.com/haskell/haskell-language-server/releases/late
 command = "haskell-language-server-wrapper"
 args = ["--lsp"]
 
+[lsp.init_options]
 [sandbox]
 compile_cmd = "ghc -o {out} {src}"
 run_cmd = "./{out}"
+test_cmd = ""
+
+[formatter]
+command = ""
+args = []
+
+[linter]
+command = ""
+args = []

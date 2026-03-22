@@ -1,7 +1,13 @@
 [language]
 name = "go"
 extensions = ["go"]
+aliases = ["go"]
+root_markers = ["go.mod"]
 
+[language.comments]
+line = "//"
+block = ["/*", "*/"]
+doc = "///"
 [parser]
 type = "wasm"
 source = "prebuilt"
@@ -14,6 +20,16 @@ name = "gopls"
 download_url = ""
 command = "gopls"
 
+[lsp.init_options]
 [sandbox]
 compile_cmd = "go build -o {out} {src}"
 run_cmd = "./{out}"
+test_cmd = ""
+
+[formatter]
+command = ""
+args = []
+
+[linter]
+command = ""
+args = []

@@ -1,7 +1,13 @@
 [language]
 name = "swift"
 extensions = ["swift"]
+aliases = ["swift"]
+root_markers = []
 
+[language.comments]
+line = "//"
+block = ["/*", "*/"]
+doc = "///"
 [parser]
 type = "wasm"
 # Needs CI build - no official WASM release
@@ -16,6 +22,16 @@ name = "sourcekit-lsp"
 download_url = ""
 command = "sourcekit-lsp"
 
+[lsp.init_options]
 [sandbox]
 compile_cmd = "swift build"
 run_cmd = "swift run"
+test_cmd = ""
+
+[formatter]
+command = ""
+args = []
+
+[linter]
+command = ""
+args = []

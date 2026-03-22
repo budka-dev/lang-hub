@@ -1,7 +1,13 @@
 [language]
 name = "python"
 extensions = ["py", "pyw", "pyi"]
+aliases = ["py", "python"]
+root_markers = ["pyproject.toml", "setup.py", ".git"]
 
+[language.comments]
+line = "#"
+block = ["\"\"\"", "\"\"\""]
+doc = "\"\"\""
 [parser]
 type = "wasm"
 source = "prebuilt"
@@ -14,6 +20,16 @@ download_url = "https://registry.npmjs.org/pyright/-/pyright-latest.tgz"
 command = "pyright-langserver"
 args = ["--stdio"]
 
+[lsp.init_options]
 [sandbox]
 compile_cmd = "python3 -m py_compile {src}"
 run_cmd = "python3 {src}"
+test_cmd = ""
+
+[formatter]
+command = ""
+args = []
+
+[linter]
+command = ""
+args = []

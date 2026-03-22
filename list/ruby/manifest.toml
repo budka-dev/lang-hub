@@ -1,7 +1,13 @@
 [language]
 name = "ruby"
 extensions = ["rb", "rbw", "rake", "gemspec"]
+aliases = ["rb", "ruby"]
+root_markers = ["Gemfile", ".git"]
 
+[language.comments]
+line = "#"
+block = ["=begin", "=end"]
+doc = "///"
 [parser]
 type = "wasm"
 source = "prebuilt"
@@ -14,6 +20,16 @@ download_url = "https://rubygems.org/downloads/solargraph-0.50.0.gem"
 command = "solargraph"
 args = ["stdio"]
 
+[lsp.init_options]
 [sandbox]
 compile_cmd = "ruby -c {src}"
 run_cmd = "ruby {src}"
+test_cmd = ""
+
+[formatter]
+command = ""
+args = []
+
+[linter]
+command = ""
+args = []

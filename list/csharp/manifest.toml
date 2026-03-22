@@ -1,7 +1,13 @@
 [language]
 name = "csharp"
 extensions = ["cs"]
+aliases = ["csharp"]
+root_markers = ["*.sln", "*.csproj", ".git"]
 
+[language.comments]
+line = "//"
+block = ["/*", "*/"]
+doc = "///"
 [parser]
 type = "wasm"
 source = "build"
@@ -14,6 +20,16 @@ download_url = "https://github.com/OmniSharp/omnisharp-roslyn/releases/latest/do
 command = "omnisharp"
 args = ["-lsp"]
 
+[lsp.init_options]
 [sandbox]
 compile_cmd = "dotnet build -o {out_dir} {src}"
 run_cmd = "dotnet {out}"
+test_cmd = ""
+
+[formatter]
+command = ""
+args = []
+
+[linter]
+command = ""
+args = []

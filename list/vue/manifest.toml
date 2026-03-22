@@ -1,7 +1,13 @@
 [language]
 name = "vue"
 extensions = ["vue"]
+aliases = ["vue"]
+root_markers = ["package.json", ".git"]
 
+[language.comments]
+line = "//"
+block = ["/*", "*/"]
+doc = "///"
 [parser]
 type = "wasm"
 source = "build"
@@ -14,6 +20,16 @@ download_url = "https://registry.npmjs.org/@volar/vue-language-server/-/vue-lang
 command = "vue-language-server"
 args = ["--stdio"]
 
+[lsp.init_options]
 [sandbox]
 compile_cmd = "vue-tsc --noEmit {src}"
 run_cmd = "npm run dev"
+test_cmd = ""
+
+[formatter]
+command = ""
+args = []
+
+[linter]
+command = ""
+args = []

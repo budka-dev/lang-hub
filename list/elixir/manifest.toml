@@ -1,7 +1,13 @@
 [language]
 name = "elixir"
 extensions = ["ex", "exs"]
+aliases = ["ex", "exs", "elixir"]
+root_markers = ["mix.exs"]
 
+[language.comments]
+line = "#"
+block = ["/*", "*/"]
+doc = "///"
 [parser]
 type = "wasm"
 source = "build"
@@ -13,6 +19,16 @@ name = "elixir-ls"
 download_url = "https://github.com/elixir-lsp/elixir-ls/releases/download/v0.30.0/elixir-ls-v0.30.0.zip"
 command = "language_server.sh"
 
+[lsp.init_options]
 [sandbox]
 compile_cmd = "elixirc {src}"
 run_cmd = "elixir {src}"
+test_cmd = ""
+
+[formatter]
+command = ""
+args = []
+
+[linter]
+command = ""
+args = []

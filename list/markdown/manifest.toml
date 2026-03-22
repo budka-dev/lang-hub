@@ -1,7 +1,13 @@
 [language]
 name = "markdown"
 extensions = ["md", "markdown", "mdown", "mkd", "mkdn"]
+aliases = ["markdown"]
+root_markers = [".git"]
 
+[language.comments]
+line = "//"
+block = ["/*", "*/"]
+doc = "///"
 [parser]
 type = "wasm"
 source = "build"
@@ -14,6 +20,16 @@ download_url = "https://github.com/artempyanykh/marksman/releases/latest/downloa
 command = "marksman"
 args = ["server"]
 
+[lsp.init_options]
 [sandbox]
 compile_cmd = ""
 run_cmd = ""
+test_cmd = ""
+
+[formatter]
+command = ""
+args = []
+
+[linter]
+command = ""
+args = []

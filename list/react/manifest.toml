@@ -1,7 +1,13 @@
 [language]
 name = "react"
 extensions = ["jsx", "tsx"]
+aliases = ["react", "js", "ts", "jsx", "tsx"]
+root_markers = ["package.json", ".git"]
 
+[language.comments]
+line = "//"
+block = ["/*", "*/"]
+doc = "///"
 [parser]
 type = "wasm"
 source = "build"
@@ -14,6 +20,16 @@ download_url = "https://registry.npmjs.org/typescript-language-server/-/typescri
 command = "typescript-language-server"
 args = ["--stdio"]
 
+[lsp.init_options]
 [sandbox]
 compile_cmd = "tsc --jsx react-jsx --noEmit {src}"
 run_cmd = "npm run dev"
+test_cmd = ""
+
+[formatter]
+command = ""
+args = []
+
+[linter]
+command = ""
+args = []

@@ -1,7 +1,13 @@
 [language]
 name = "zig"
 extensions = ["zig"]
+aliases = ["zig"]
+root_markers = []
 
+[language.comments]
+line = "//"
+block = ["/*", "*/"]
+doc = "///"
 [parser]
 type = "wasm"
 source = "build"
@@ -13,6 +19,16 @@ name = "zls"
 download_url = "https://github.com/zigtools/zls/releases/latest/download/zls-{arch}-{os}.tar.xz"
 command = "zls"
 
+[lsp.init_options]
 [sandbox]
 compile_cmd = "zig build-exe -O ReleaseFast -femit-bin={out} {src}"
 run_cmd = "./{out}"
+test_cmd = ""
+
+[formatter]
+command = ""
+args = []
+
+[linter]
+command = ""
+args = []

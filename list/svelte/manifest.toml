@@ -1,7 +1,13 @@
 [language]
 name = "svelte"
 extensions = ["svelte"]
+aliases = ["svelte"]
+root_markers = ["package.json", ".git"]
 
+[language.comments]
+line = "//"
+block = ["/*", "*/"]
+doc = "///"
 [parser]
 type = "wasm"
 source = "build"
@@ -14,6 +20,16 @@ download_url = "https://registry.npmjs.org/svelte-language-server/-/svelte-langu
 command = "svelteserver"
 args = ["--stdio"]
 
+[lsp.init_options]
 [sandbox]
 compile_cmd = "svelte-check --workspace {src}"
 run_cmd = "npm run dev"
+test_cmd = ""
+
+[formatter]
+command = ""
+args = []
+
+[linter]
+command = ""
+args = []

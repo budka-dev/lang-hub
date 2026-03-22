@@ -1,7 +1,13 @@
 [language]
 name = "php"
 extensions = ["php", "phtml", "php3", "php4", "php5", "php7", "php8"]
+aliases = ["php"]
+root_markers = ["composer.json", ".git"]
 
+[language.comments]
+line = "//"
+block = ["/*", "*/"]
+doc = "///"
 [parser]
 type = "wasm"
 source = "prebuilt"
@@ -14,6 +20,16 @@ download_url = "https://registry.npmjs.org/intelephense/-/intelephense-latest.tg
 command = "intelephense"
 args = ["--stdio"]
 
+[lsp.init_options]
 [sandbox]
 compile_cmd = "php -l {src}"
 run_cmd = "php {src}"
+test_cmd = ""
+
+[formatter]
+command = ""
+args = []
+
+[linter]
+command = ""
+args = []

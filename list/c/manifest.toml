@@ -1,7 +1,13 @@
 [language]
 name = "c"
 extensions = ["c", "h"]
+aliases = ["c"]
+root_markers = ["CMakeLists.txt", ".git"]
 
+[language.comments]
+line = "//"
+block = ["/*", "*/"]
+doc = "///"
 [parser]
 type = "wasm"
 source = "build"
@@ -13,6 +19,16 @@ name = "clangd"
 download_url = "https://github.com/clangd/clangd/releases/latest/download/clangd-{os}-{arch}.zip"
 command = "clangd"
 
+[lsp.init_options]
 [sandbox]
 compile_cmd = "gcc -o {out} {src}"
 run_cmd = "./{out}"
+test_cmd = ""
+
+[formatter]
+command = ""
+args = []
+
+[linter]
+command = ""
+args = []

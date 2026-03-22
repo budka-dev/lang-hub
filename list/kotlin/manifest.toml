@@ -1,7 +1,13 @@
 [language]
 name = "kotlin"
 extensions = ["kt", "kts"]
+aliases = ["kotlin"]
+root_markers = ["build.gradle", "pom.xml", ".git"]
 
+[language.comments]
+line = "//"
+block = ["/*", "*/"]
+doc = "///"
 [parser]
 type = "wasm"
 source = "build"
@@ -14,6 +20,16 @@ name = "kotlin-language-server"
 download_url = "https://github.com/fwcd/kotlin-language-server/releases/latest/download/server.zip"
 command = "kotlin-language-server"
 
+[lsp.init_options]
 [sandbox]
 compile_cmd = "kotlinc -d {out}.jar {src}"
 run_cmd = "kotlin -cp {out}.jar {class_name}"
+test_cmd = ""
+
+[formatter]
+command = ""
+args = []
+
+[linter]
+command = ""
+args = []

@@ -1,7 +1,13 @@
 [language]
 name = "rust"
 extensions = ["rs"]
+aliases = ["rs", "rust"]
+root_markers = ["Cargo.toml"]
 
+[language.comments]
+line = "//"
+block = ["/*", "*/"]
+doc = "///"
 [parser]
 type = "wasm"
 # Official pre-built WASM from tree-sitter org
@@ -14,6 +20,16 @@ name = "rust-analyzer"
 download_url = "https://github.com/rust-lang/rust-analyzer/releases/latest/download/rust-analyzer-{os}-{arch}.gz"
 command = "rust-analyzer"
 
+[lsp.init_options]
 [sandbox]
 compile_cmd = "rustc -o {out} {src}"
 run_cmd = "./{out}"
+test_cmd = ""
+
+[formatter]
+command = ""
+args = []
+
+[linter]
+command = ""
+args = []
