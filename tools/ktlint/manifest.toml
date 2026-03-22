@@ -3,6 +3,9 @@ name = "ktlint"
 description = "Kotlin formatter/linter"
 capabilities = ["formatter", "linter"]
 
+[tool.download]
+url = "https://github.com/pinterest/ktlint/releases/download/1.3.1/ktlint"
+executable_name = "ktlint"
 [formatter]
 command = "ktlint"
 args = ["-F"]

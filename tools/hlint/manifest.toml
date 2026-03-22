@@ -3,5 +3,8 @@ name = "hlint"
 description = "Haskell linter"
 capabilities = ["linter"]
 
+[tool.download]
+url = "https://github.com/ndmitchell/hlint/releases/download/v3.8/hlint-3.8-x86_64-linux.tar.gz"
+executable_name = "hlint"
 [linter]
 command = "hlint"

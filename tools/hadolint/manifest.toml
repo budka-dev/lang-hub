@@ -3,5 +3,8 @@ name = "hadolint"
 description = "Dockerfile linter"
 capabilities = ["linter"]
 
+[tool.download]
+url = "https://github.com/hadolint/hadolint/releases/download/v2.12.0/hadolint-Linux-x86_64"
+executable_name = "hadolint"
 [linter]
 command = "hadolint"

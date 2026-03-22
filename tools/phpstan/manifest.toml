@@ -3,6 +3,9 @@ name = "phpstan"
 description = "PHP linter"
 capabilities = ["linter"]
 
+[tool.download]
+url = "https://github.com/phpstan/phpstan/releases/download/1.12.5/phpstan.phar"
+executable_name = "phpstan.phar"
 [linter]
 command = "phpstan"
 args = ["analyse"]

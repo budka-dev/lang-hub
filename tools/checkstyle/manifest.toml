@@ -3,5 +3,8 @@ name = "checkstyle"
 description = "Java linter"
 capabilities = ["linter"]
 
+[tool.download]
+url = "https://github.com/checkstyle/checkstyle/releases/download/checkstyle-10.18.1/checkstyle-10.18.1-all.jar"
+executable_name = "checkstyle.jar"
 [linter]
 command = "checkstyle"

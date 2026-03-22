@@ -3,6 +3,9 @@ name = "google-java-format"
 description = "Java formatter"
 capabilities = ["formatter"]
 
+[tool.download]
+url = "https://github.com/google/google-java-format/releases/download/v1.23.0/google-java-format-1.23.0-all-deps.jar"
+executable_name = "google-java-format.jar"
 [formatter]
 command = "google-java-format"
 args = ["--replace"]
