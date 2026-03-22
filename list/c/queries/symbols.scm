@@ -43,9 +43,11 @@
 ) @typedef
 
 (field_declaration
-  (field_declarator
-    (identifier) @name
-  )
+  declarator: [
+    (field_identifier) @name
+    (array_declarator declarator: (field_identifier) @name)
+    (pointer_declarator declarator: (field_identifier) @name)
+  ]
 ) @field
 
 (parameter_declaration

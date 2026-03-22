@@ -68,7 +68,7 @@
   name: (property_identifier) @name
 ) @output
 
-(property_signature
+(public_field_definition
   (decorator
     (call_expression
       function: (identifier) @input_decorator
@@ -78,7 +78,7 @@
   name: (property_identifier) @name
 ) @input
 
-(property_signature
+(public_field_definition
   (decorator
     (call_expression
       function: (identifier) @view_child_decorator
@@ -88,7 +88,7 @@
   name: (property_identifier) @name
 ) @view_child
 
-(property_signature
+(public_field_definition
   (decorator
     (call_expression
       function: (identifier) @content_child_decorator
@@ -122,6 +122,3 @@
   )
 ) @export
 
-(template_element) @template
-
-(style_element) @styles

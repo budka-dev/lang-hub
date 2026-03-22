@@ -253,7 +253,7 @@ jobs:
             echo "- **$name** ($size)" >> release-body.md
           done
 
-      - name: Create GitHub Release
+      - name: Create Versioned GitHub Release
         if: env.SKIP_RELEASE != 'true'
         uses: softprops/action-gh-release@v2
         with:
@@ -262,3 +262,16 @@ jobs:
           body_path: release-body.md
           files: release-assets/*.wasm
           make_latest: true
+
+      - name: Update 'latest' GitHub Release
+        if: env.SKIP_RELEASE != 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Удаляем старый релиз и тег (если они есть), игнорируем ошибки
+          gh release delete latest --cleanup-tag -y || true
+          
+          # Создаем новый релиз с тегом latest
+          gh release create latest release-assets/*.wasm \
+            --title "Latest WASM Parsers" \
+            --notes-file release-body.md

@@ -39,9 +39,11 @@
 ) @typedef
 
 (field_declaration
-  (field_declarator
+  declarator: [
     (field_identifier) @name
-  )
+    (array_declarator declarator: (field_identifier) @name)
+    (pointer_declarator declarator: (field_identifier) @name)
+  ]
 ) @field
 
 (declaration
@@ -55,7 +57,10 @@
 ) @parameter
 
 (namespace_definition
-  name: (identifier) @name
+  name: [
+    (namespace_identifier) @name
+    (nested_namespace_specifier) @name
+  ]
 ) @namespace
 
 (using_declaration

@@ -52,34 +52,4 @@
   )
 )
 
-(template_element) @template_reference
 
-(style_element) @style_reference
-
-(binding
-  (identifier) @binding_reference
-)
-
-(event_binding
-  (identifier) @event_binding_reference
-)
-
-(two_way_binding
-  (identifier) @two_way_binding_reference
-)
-
-(structural_directive
-  (identifier) @structural_directive_reference
-)
-
-(attribute_binding
-  (identifier) @attribute_binding_reference
-)
-
-(interpolation
-  (identifier) @interpolation_reference
-)
-
-(pipe_sequence
-  (identifier) @pipe_reference
-)
