@@ -5,8 +5,8 @@ extensions = ["yaml", "yml"]
 [parser]
 type = "wasm"
 source = "build"
-repo = "ikatyang/tree-sitter-yaml"
-download_url = "https://github.com/tree-sitter/tree-sitter-yaml/releases/latest/download/tree-sitter-yaml.wasm"
+repo = "tree-sitter-grammars/tree-sitter-yaml"
+download_url = "https://github.com/tree-sitter-grammars/tree-sitter-yaml/releases/latest/download/tree-sitter-yaml.wasm"
 
 [lsp]
 name = "yaml-language-server"
